@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Evargo </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link href="./assets/img/logos/favicon.png" rel="shortcut icon">
+    <link href="./assets/css/style.css" rel="stylesheet">
+
+
+</head>
+<!-- /Head -->
+<!-- Set Body to full screen when Preloader is showing ('vh-100 vw-100 overflow-hidden'). -->
+
+<body class="vh-100 vw-100 overflow-hidden">
+    <!-- Header -->
+    <!-- Preloader -->
+    <div class="position-fixed top-0 bottom-0 bg-body vw-100 z-1100 d-flex align-items-center justify-content-center" id="preloader">
+        <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <!-- /Preloader -->
+    <!-- Language modal -->
+    <div class="modal fade" id="mdlLanguage" tabindex="-1" aria-labelledby="h3Language" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="h3Language">Select language</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav small row mb-0" data-lang-list>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="en" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/en.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">English</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="fr" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/fr.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Français</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="es" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/es.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Español</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="de" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/de.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Deutsch</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="it" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/it.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Italiano</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="nl" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/nl.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Nederlands</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="pt" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/pt.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Português</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="ru" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/ru.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Русский</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="cn" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/cn.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">日本語</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Language modal -->
+    <!-- Currency modal -->
+    <div class="modal fade" id="mdlCurrency" tabindex="-1" aria-labelledby="h3Currency" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="h3Currency">Select currency</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav small row mb-0" data-currency-list>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="usd" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">usd</strong> - United States Dollar</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="eur" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">eur</strong> - European Union</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="gbp" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">gbp</strong> - Pound Sterling</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="aud" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">aud</strong> - Australian Dollar</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="nzd" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">nzd</strong> - New Zealand Dollar</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="cad" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">cad</strong> - Canadian Dollar</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="jpy" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">jpy</strong> - Japanese Yen</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="cny" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">cny</strong> - Chinese Yuan</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="vnd" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">vnd</strong> - Vietnam Dong</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="sgd" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">sgd</strong> - Singapore Dollar</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Currency modal -->
+    <!-- Modal Login -->
+    <div class="modal fade" id="mdlLogin" data-bs-keyboard="false" tabindex="-1" aria-labelledby="mdlLoginTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="mdlLoginTitle">Login to Evargo</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation pt-2" method="post" novalidate="" action="./dashboard.html">
+                        <!-- Login Facebook/Google -->
+                        <div class="row g-4 mb-8">
+                            <div class="col-12">
+                                <button type="button" class="btn btn-outline-light text-secondary d-flex align-items-center justify-content-center shadow-sm w-100 border">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 1000 1000" width="20" height="20">
+                                        <path fill="#3b579d" d="M500 1000A500 500 0 0 1 500 0a500 500 0 0 1 0 1000z" />
+                                        <path fill="#fff" d="M630 1000V613h130l20-151H630v-97c0-43 12-73 75-73h80V157c-14-2-62-6-117-6-115 0-194 70-194 200v111H344v151h130v387h156z" />
+                                    </svg>
+                                    <span class="ms-3">Facebook</span>
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="btn btn-outline-light text-secondary d-flex align-items-center justify-content-center shadow-sm w-100 border">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 534 544" width="20" height="20">
+                                        <path fill="#4285f4" d="M534 278c0-18-2-37-5-55H272v105h147c-6 34-26 64-54 83v68h87c52-48 82-118 82-201z" />
+                                        <path fill="#34a853" d="M272 544c74 0 135-24 181-65l-88-68c-25 16-56 26-93 26-71 0-131-48-153-113H29v70c46 92 140 150 243 150z" />
+                                        <path fill="#fbbc04" d="M119 324c-11-33-11-70 0-104v-70H29c-39 77-39 168 0 244l90-70z" />
+                                        <path fill="#ea4335" d="M272 108c39-1 76 14 105 41l77-78a272 272 0 0 0-425 79l90 70c22-64 82-112 153-112z" />
+                                    </svg>
+                                    <span class="ms-3">Google</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /Login Facebook/Google -->
+                        <hr>
+                        <!-- Login Email -->
+                        <div class="mb-8">
+                            <div class="mb-6">
+                                <label for="txtEmail2" class="form-label">Email<span class="text-danger">*</span></label>
+                                <input class="form-control shadow-sm" type="email" id="txtEmail2" name="username2" value="" placeholder="" required="">
+                                <div class="invalid-feedback"> Please enter email. </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="txtPassword2" class="form-label">Password<span class="text-danger">*</span></label>
+                                <input class="form-control shadow-sm" id="txtPassword2" name="password2" placeholder="" value="" type="password" required="">
+                                <div class="invalid-feedback"> Please enter password. </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-5">
+                                        <div class="form-check">
+                                            <input class="form-check-input shadow-sm" type="checkbox" value="" id="chkRemember2">
+                                            <label class="form-check-label" for="chkRemember2"><span class="text-body">Remember me</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-5 text-end">
+                                        <a href="#mdlForgotPassword" data-bs-toggle="modal">Forgot password?</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-5">
+                                <button type="submit" class="btn btn-primary w-50" id="btnSubmit2">
+                                    <i class="ti ti-lock"></i>
+                                    <span>Login</span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="mb-2"> New here? <a href="#mdlRegister" data-bs-toggle="modal">Create an account</a>
+                        </div>
+                        <!-- /Login Email -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal Login -->
+    <!-- Modal Forgot Password -->
+    <div class="modal fade" id="mdlForgotPassword" data-bs-keyboard="false" tabindex="-1" aria-labelledby="mdlForgotPasswordTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="mdlForgotPasswordTitle">Forgot Password</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" method="post" novalidate="" action="./new-password.html">
+                        <div class="mb-5">
+                            <label for="txtEmail4" class="form-label">Email<span class="text-danger">*</span></label>
+                            <input class="form-control shadow-sm" type="email" id="txtEmail4" name="username4" value="" placeholder="" required="">
+                            <div class="invalid-feedback"> Please enter Email. </div>
+                        </div>
+                        <p><strong class="fw-medium">Note:</strong> A link will be sent to your mail, you need to click on it to create a new password.</p>
+                        <div class="mb-5">
+                            <button type="submit" class="btn btn-primary w-50" id="btnSubmit4">
+                                <i class="ti ti-mail"></i>
+                                <span>Send link</span>
+                            </button>
+                        </div>
+                        <hr>
+                        <div class="mb-2"> Remember Password? <a href="#mdlLogin" data-bs-toggle="modal">Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal Forgot Password -->
+    <!-- Modal Register -->
+    <div class="modal fade" id="mdlRegister" data-bs-keyboard="false" tabindex="-1" aria-labelledby="mdlRegisterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="mdlRegisterTitle">Register for Evargo</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation pt-2" method="post" novalidate="" action="./login.html">
+                        <!-- Login Facebook/Google -->
+                        <div class="row g-4 mb-5">
+                            <div class="col-12">
+                                <button type="button" class="btn btn-outline-light text-secondary d-flex align-items-center justify-content-center shadow-sm w-100 border">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 1000 1000" width="20" height="20">
+                                        <path fill="#3b579d" d="M500 1000A500 500 0 0 1 500 0a500 500 0 0 1 0 1000z" />
+                                        <path fill="#fff" d="M630 1000V613h130l20-151H630v-97c0-43 12-73 75-73h80V157c-14-2-62-6-117-6-115 0-194 70-194 200v111H344v151h130v387h156z" />
+                                    </svg>
+                                    <span class="ms-3">Facebook</span>
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="btn btn-outline-light text-secondary d-flex align-items-center justify-content-center shadow-sm w-100 border">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 534 544" width="20" height="20">
+                                        <path fill="#4285f4" d="M534 278c0-18-2-37-5-55H272v105h147c-6 34-26 64-54 83v68h87c52-48 82-118 82-201z" />
+                                        <path fill="#34a853" d="M272 544c74 0 135-24 181-65l-88-68c-25 16-56 26-93 26-71 0-131-48-153-113H29v70c46 92 140 150 243 150z" />
+                                        <path fill="#fbbc04" d="M119 324c-11-33-11-70 0-104v-70H29c-39 77-39 168 0 244l90-70z" />
+                                        <path fill="#ea4335" d="M272 108c39-1 76 14 105 41l77-78a272 272 0 0 0-425 79l90 70c22-64 82-112 153-112z" />
+                                    </svg>
+                                    <span class="ms-3">Google</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /Login Facebook/Google -->
+                        <hr>
+                        <!-- Register -->
+                        <div class="row">
+                            <div class="col-24">
+                                <div class="mb-5">
+                                    <label for="txtEmail3" class="form-label">Email<span class="text-danger">*</span></label>
+                                    <input class="form-control shadow-sm" id="txtEmail3" type="email" name="email3" value="" placeholder="" required="">
+                                    <div class="invalid-feedback"> Please enter Email. </div>
+                                </div>
+                            </div>
+                            <div class="col-24">
+                                <div class="mb-5">
+                                    <label for="txtPassword3" class="form-label">Password<span class="text-danger">*</span></label>
+                                    <input class="form-control shadow-sm" id="txtPassword3" name="password3" placeholder="" value="" type="password" required="">
+                                    <div class="invalid-feedback"> Please enter password. </div>
+                                </div>
+                            </div>
+                            <div class="col-24">
+                                <div class="mb-5">
+                                    <label for="txtRetypePassword3" class="form-label">Retype password<span class="text-danger">*</span></label>
+                                    <input class="form-control shadow-sm" id="txtRetypePassword3" name="retypepassword3" placeholder="" value="" type="password" required="">
+                                    <div class="invalid-feedback"> Please enter password. </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check mb-6">
+                            <input class="form-check-input shadow-sm" type="checkbox" value="" id="chckAgree3" required="">
+                            <label class="form-check-label" for="chckAgree3"> I agree to <a href="#" class="hover">terms and policy<span class="text-danger">*</span></a>. </label>
+                        </div>
+                        <div class="mb-5">
+                            <button class="btn btn-primary w-50" id="btnSubmit3">
+                                <i class="ti ti-user"></i>
+                                <span>Register</span>
+                            </button>
+                        </div>
+                        <hr>
+                        <div class="mb-2"> Already have an account? <a href="#mdlLogin" data-bs-toggle="modal">Login</a>
+                        </div>
+                        <!-- /Register -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal Register -->
+    <!-- Quick View Cart -->
+    <div class="offcanvas offcanvas-end border-start-0" tabindex="-1" id="OcCart" aria-labelledby="OcViewCart">
+        <div class="offcanvas-header border-bottom">
+            <h4 class="offcanvas-title h3" id="OcViewCart">Shopping Cart</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Shopping Cart -->
+            <ul class="list-group list-group-flush tour-cart mb-6">
+                <li class="list-group-item pt-6 pb-6 ps-0 pe-0">
+                    <!-- Tour -->
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 position-relative">
+                            <a href="./single-tour.html" class="d-block">
+                                <figure class="image-hover-scale image-hover-overlay rounded mb-0">
+                                    <img src="./assets/img/tours/t33.jpg" srcset="./assets/img/tours/t33@2x.jpg 2x" alt="..." width="90">
+                                </figure>
+                            </a>
+                            <a href="javascript:;" class="position-absolute top-0 end-0 m-1 lh-1 p-1 fsm-8 text-white rounded-circle bg-dark bg-opacity-50"><i class="ti ti-x"></i></a>
+                        </div>
+                        <div class="flex-grow-1 ms-5">
+                            <h6 class="fw-semibold fsm-2 mb-2">
+                                <a href="./single-tour.html" class="text-body link-hover-primary">Louvre Museum Guided Tour with Skip the Line Entrance</a>
+                            </h6>
+                            <div class="fsm-3 text-secondary">
+                                <span class="me-2">From: <strong class="text-danger"><sup>$</sup>95.85</strong></span>
+                                <del class="old-price">
+                                    <span class="text-secondary"><sup>$</sup>115.85</span>
+                                </del>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tour -->
+                </li>
+                <li class="list-group-item pt-6 pb-6 ps-0 pe-0">
+                    <!-- Tour -->
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 position-relative">
+                            <a href="./single-tour.html" class="d-block">
+                                <figure class="image-hover-scale image-hover-overlay rounded mb-0">
+                                    <img src="./assets/img/tours/t34.jpg" srcset="./assets/img/tours/t34@2x.jpg 2x" alt="..." width="90">
+                                </figure>
+                            </a>
+                            <a href="javascript:;" class="position-absolute top-0 end-0 m-1 lh-1 p-1 fsm-8 text-white rounded-circle bg-dark bg-opacity-50"><i class="ti ti-x"></i></a>
+                        </div>
+                        <div class="flex-grow-1 ms-5">
+                            <h6 class="fw-semibold fsm-2 mb-2">
+                                <a href="./single-tour.html" class="text-body link-hover-primary">Eiffel Tower Direct Access Optional Summit Access</a>
+                            </h6>
+                            <div class="fsm-3 text-secondary">
+                                <span class="me-2">From: <strong class="text-danger"><sup>$</sup>95.85</strong></span>
+                                <del class="old-price">
+                                    <span class="text-secondary"><sup>$</sup>115.85</span>
+                                </del>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tour -->
+                </li>
+                <li class="list-group-item pt-6 pb-6 ps-0 pe-0">
+                    <!-- Tour -->
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 position-relative">
+                            <a href="./single-tour.html" class="d-block">
+                                <figure class="image-hover-scale image-hover-overlay rounded mb-0">
+                                    <img src="./assets/img/tours/t35.jpg" srcset="./assets/img/tours/t35@2x.jpg 2x" alt="..." width="90">
+                                </figure>
+                            </a>
+                            <a href="javascript:;" class="position-absolute top-0 end-0 m-1 lh-1 p-1 fsm-8 text-white rounded-circle bg-dark bg-opacity-50"><i class="ti ti-x"></i></a>
+                        </div>
+                        <div class="flex-grow-1 ms-5">
+                            <h6 class="fw-semibold fsm-2 mb-2">
+                                <a href="./single-tour.html" class="text-body link-hover-primary">Saint-Emilion and Medoc Full-Day Wine Experience</a>
+                            </h6>
+                            <div class="fsm-3 text-secondary">
+                                <span class="me-2">From: <strong class="text-danger"><sup>$</sup>95.85</strong></span>
+                                <del class="old-price">
+                                    <span class="text-secondary"><sup>$</sup>115.85</span>
+                                </del>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tour -->
+                </li>
+            </ul>
+            <!-- /Checkout -->
+            <div class="mb-4 text-end">
+                <div class="mb-4">
+                    <div class="mb-8">
+                        <div>
+                            <span class="fw-semibold h5">Total (3 items):</span>
+                            <span class="h3 text-danger fw-bolder"><sup>$</sup>285.85</span>
+                        </div>
+                        <p class="text-secondary text-end fsm-3">
+                            <em>* All taxes and fees included</em>
+                        </p>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <a href="./shopping-cart.html" class="btn btn-outline-primary w-100">
+                                <i class="ti ti-shopping-bag"></i>
+                                <span>View Cart</span>
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <a href="./checkout.html" class="btn btn-primary w-100">
+                                <i class="ti ti-credit-card"></i>
+                                <span>Checkout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Checkout -->
+        </div>
+    </div>
+    <!-- /Quick View Cart -->
+    <!-- Header -->
+    <header id="header" class="header">
+        <nav class="navbar navbar-main navbar-expand-xl fw-semibold">
+            <div class="container">
+                <!-- Brand -->
+                <a class="navbar-brand d-inline-flex align-items-center" id="brandHeader" href="./index.html">
+                    <img src="./assets/img/logos/logo.png" srcset="./assets/img/logos/logo@2x.png 2x" class="logo" alt="">
+                    <span class="text-body-emphasis fs-2 ms-4">Evargo</span>
+                </a>
+                <!-- /Brand -->
+                <!-- offcanvas Navbar -->
+                <div class="offcanvas offcanvas-navbar offcanvas-end border-start-0" tabindex="-1" id="offcanvasNavbar">
+                    <!-- Offcanvas header -->
+                    <div class="offcanvas-header pb-0">
+                        <h3 class="offcanvas-title h1 text-body-emphasis" id="bdSidebarOffcanvasLabel">Evargo</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <!-- /Offcanvas header -->
+                    <div class="offcanvas-body justify-content-between">
+                        <!-- Navbar nav-->
+                        <ul class="navbar-nav align-items-xl-center">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle-hover   " href="./index.html" data-bs-display="static">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown mega-menu">
+                                <a class="nav-link dropdown-toggle-hover " href="./explore.html" data-bs-display="static">
+                                    <span>Explore</span>
+                                    <i class="ti ti-chevron-down dropdown-toggle-icon"></i>
+                                </a>
+                                <div class="dropdown-menu mt-xl-8 pt-xl-6 pb-xl-6 ps-xl-4 pe-xl-4" data-bs-popper="static">
+                                    <div class="d-block d-xl-flex">
+                                        <div class="d-none d-xl-block mt-3 ms-5 me-3">
+                                            <a href="./destinations.html">
+                                                <figure class="figure mb-0 image-hover-scale image-hover-overlay rounded-1">
+                                                    <img src="./assets/img/about/a1.jpg" srcset="./assets/img/about/a1@2x.jpg 2x" class="img-fluid" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="mb-4 mb-xl-0">
+                                            <h6 class="mega-menu-title">Destinations</h6>
+                                            <ul class="list-unstyled ms-6 ms-xl-0 mb-4 mb-xl-0">
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Paris</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Nice</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Marseille</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Cannes</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Monaco</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Geneva</a></li>
+                                                <li>
+                                                    <a class="mega-menu-item" href="./destinations.html">
+                                                        <span>See all</span>
+                                                        <i class="ti ti-plus"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="mb-4 mb-xl-0">
+                                            <h6 class="mega-menu-title">Categories</h6>
+                                            <ul class="list-unstyled ms-6 ms-xl-0 mb-4 mb-xl-0">
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Ecotourism & Resort</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Cultural & Foods</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Explorer & Adventure</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Festival & Events</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Museums & Exhibitions</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Hiking & Trekking</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Ships & boats</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle-hover " href="./tour-grid.html" data-bs-display="static">
+                                    <span>Tours</span>
+                                    <i class="ti ti-chevron-down dropdown-toggle-icon"></i>
+                                </a>
+                                <ul class="dropdown-menu mt-xl-8" data-bs-popper="static">
+                                    <li><a class="dropdown-item " href="./destinations.html">Destinations</a></li>
+                                    <li><a class="dropdown-item " href="./tour-list.html">Tours list</a></li>
+                                    <li><a class="dropdown-item " href="./tour-grid.html">Tours grid</a></li>
+                                    <li><a class="dropdown-item " href="./single-tour.html">Single tour</a></li>
+                                    <li><a class="dropdown-item " href="./shopping-cart.html">Book tour</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown mega-menu">
+                                <a class="nav-link dropdown-toggle-hover active" href="javascript:void(0);" data-bs-display="static">
+                                    <span>Pages</span>
+                                    <i class="ti ti-chevron-down dropdown-toggle-icon"></i>
+                                </a>
+                                <div class="dropdown-menu mt-xl-8 pt-xl-6 pb-xl-6 ps-xl-4 pe-xl-4" data-bs-popper="static">
+                                    <div class="d-block d-xl-flex">
+                                        <div class="mb-4 mb-xl-0">
+                                            <h6 class="mega-menu-title">My Account</h6>
+                                            <ul class="list-unstyled ms-6 ms-xl-0 mb-4 mb-xl-0">
+                                                <li><a class="mega-menu-item " href="./shopping-cart.html">Shopping Cart</a></li>
+                                                <li><a class="mega-menu-item active" href="./dashboard.html">Dashboard</a></li>
+                                                <li><a class="mega-menu-item " href="./wishlist.html">Wishlist</a></li>
+                                                <li><a class="mega-menu-item " href="./booking.html">Booking</a></li>
+                                                <li><a class="mega-menu-item " href="./setting.html">Setting</a></li>
+                                                <li><a class="mega-menu-item " href="./register.html">Register</a></li>
+                                                <li><a class="mega-menu-item " href="./login.html">Login</a></li>
+                                                <li><a class="mega-menu-item " href="./forgot-password.html">Forgot password</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mb-4 mb-xl-0">
+                                            <h6 class="mega-menu-title">Other pages</h6>
+                                            <ul class="list-unstyled ms-6 ms-xl-0 mb-4 mb-xl-0">
+                                                <li><a class="mega-menu-item " href="./about.html">About</a></li>
+                                                <li>
+                                                    <a class="mega-menu-item" href="./post-grid.html">Blog</a>
+                                                    <ul class="list-unstyled ms-6">
+                                                        <li><a class="mega-menu-item " href="./post-grid.html">- Post grid</a></li>
+                                                        <li><a class="mega-menu-item " href="./post-list.html">- Post list</a></li>
+                                                        <li><a class="mega-menu-item " href="./single-post.html">- Single post</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a class="mega-menu-item " href="./contact.html">Contact</a></li>
+                                                <li><a class="mega-menu-item" href="./coming-soon.html">Coming soon</a></li>
+                                                <li><a class="mega-menu-item" href="./404.html">404</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown d-none">
+                                <a class="nav-link" href="#" target="_blank">
+                                    <i class="ti ti-shopping-cart"></i>
+                                    <span>Buy now</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /Navbar nav -->
+                        <!-- Sub Links -->
+                        <div class="d-flex align-items-center mt-4 mt-xl-0">
+                            <!-- Language & Currency -->
+                            <ul class="nav me-8">
+                                <li class="nav-item me-6">
+                                    <a class="text-body link-hover-primary d-flex align-items-center text-uppercase" data-bs-toggle="modal" href="#mdlLanguage">
+                                        <img src="./assets/img/flags/en.svg" class="me-2" height="16" alt="" id="imgFlag">
+                                        <span id="spnLang">en</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="text-body link-hover-primary d-flex text-uppercase" data-bs-toggle="modal" href="#mdlCurrency">
+                                        <span id="spnCurrency">usd</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- /Language & Currency -->
+                            <!-- Reservation -->
+                            <ul class="nav me-6">
+                                <li class="nav-item me-1">
+                                    <a href="wishlist.html" class="p-2 lh-1 text-body link-hover-primary border-0 fs-5"><i class="ti ti-heart"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="p-2 lh-1 text-body link-hover-primary border-0 fs-5 position-relative" data-bs-toggle="offcanvas" data-bs-target="#OcCart">
+                                        <span class="position-absolute top-0 end-0 p-1 bg-primary rounded-circle">
+                                            <span class="visually-hidden">Items in cart</span>
+                                        </span>
+                                        <i class="ti ti-shopping-bag"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- /Reservation -->
+                            <!-- /Sub Links -->
+                            <button type="button" id="toggle-theme" class="btn btn-sm btn-square rounded-circle text-body link-hover-primary border-0 fs-5">
+                                <i class="ti ti-sun"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- /offcanvas Navbar -->
+                <!-- Account link -->
+                <div class="ms-0 ms-xl-8 ms-auto">
+                    <div class="dropdown">
+                        <a href="javascript:;" class="d-inline-block pt-2 pb-2" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                            <img src="./assets/img/avatars/a1.jpg" srcset="./assets/img/avatars/a1@2x.jpg 2x" class="rounded-circle bg-primary-50" width="40" height="40" alt="">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end mt-7 animate slideIn" data-bs-popper="static">
+                            <li>
+                                <a class="dropdown-item" href="./dashboard.html">
+                                    <i class="ti ti-category me-1"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./wishlist.html">
+                                    <i class="ti ti-heart me-1"></i>
+                                    <span>Wishlist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./booking.html">
+                                    <i class="ti ti-calendar me-1"></i>
+                                    <span>Booking</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./setting.html">
+                                    <i class="ti ti-settings me-1"></i>
+                                    <span>Setting</span>
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./login.html">
+                                    <i class="ti ti-logout me-1"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /Account link -->
+                <!-- Nav toggler -->
+                <button class="navbar-toggler ms-6" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- /Nav toggler -->
+            </div>
+        </nav>
+    </header>
+    <!-- /Header -->
+    <!-- /Header -->
+    <main>
+        <!-- Page title -->
+        <section id="title" class="border-top pt-12 pb-8">
+            <div class="container">
+                <div class="d-block d-lg-flex align-items-center">
+                    <div class="me-lg-auto mb-4 mb-lg-10">
+                        <!-- Title -->
+                        <h1 class="display-5 fw-bold mb-3 text-body-emphasis">Dashboard</h1>
+                        <!-- /Title -->
+                    </div>
+                    <div class="text-lg-end mb-10">
+                        <!-- Breadcrumb -->
+                        <nav aria-label="breadcrumb" class="d-none d-lg-block">
+                            <ol class="breadcrumb mb-2">
+                                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="./tour-list.html">My Account</a></li>
+                                <li class="breadcrumb-item active d-none d-md-block" aria-current="page">Dashboard</li>
+                            </ol>
+                        </nav>
+                        <!-- /Breadcrumb -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Page title -->
+        <!-- Dashboard -->
+        <section id="dashboard">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-24 col-xl-5">
+                        <!-- Account menu -->
+                        <div class="d-none d-xl-block">
+                            <!-- Avatar & Username -->
+                            <div class="mb-8 d-flex align-items-center">
+                                <form class="position-relative" data-user-avatar="">
+                                    <figure class="mb-0">
+                                        <img src="./assets/img/avatars/a1.jpg" srcset="./assets/img/avatars/a1@2x.jpg 2x" alt="" width="80" height="80" class="rounded-circle" data-show-avatar="">
+                                    </figure>
+                                    <div class="position-absolute top-0 start-100 translate-middle pt-4 pe-4">
+                                        <label for="filAvatar" class="btn btn-sm btn-square text-body btn-outline-light bg-white rounded-circle shadow ">
+                                            <i class="ti ti-camera"></i>
+                                        </label>
+                                    </div>
+                                    <div class="position-absolute top-100 start-100 translate-middle pb-4 pe-4">
+                                        <button type="submit" class="btn btn-sm btn-square btn-primary rounded-circle d-none" data-update-avatar="">
+                                            <i class="ti ti-check"></i>
+                                        </button>
+                                    </div>
+                                    <input class="d-none" type="file" id="filAvatar" data-input-avatar="">
+                                </form>
+                                <div class="ps-6">
+                                    <span class="text-secondary">Welcome</span>
+                                    <h3 class="mb-0 fs-4">Jonh Deep</h3>
+                                </div>
+                            </div>
+                            <!-- /Avatar & Username -->
+                            <!-- User menu -->
+                            <div class="mb-6">
+                                <nav class="nav flex-column fw-semibold">
+                                    <a class="nav-link link-body-emphasis ps-0 pe-0 active" href="./dashboard.html">
+                                        <i class="ti ti-category me-1"></i>
+                                        <span>Dashboard</span>
+                                    </a>
+                                    <a class="nav-link link-body-emphasis ps-0 pe-0 " href="./wishlist.html">
+                                        <i class="ti ti-heart me-1"></i>
+                                        <span>Wishlist</span>
+                                    </a>
+                                    <a class="nav-link link-body-emphasis ps-0 pe-0 " href="./booking.html">
+                                        <i class="ti ti-calendar me-1"></i>
+                                        <span>Booking</span>
+                                    </a>
+                                    <a class="nav-link link-body-emphasis ps-0 pe-0 " href="./setting.html">
+                                        <i class="ti ti-settings me-1"></i>
+                                        <span>Setting</span>
+                                    </a>
+                                    <a class="nav-link link-body-emphasis ps-0 pe-0" href="./login.html">
+                                        <i class="ti ti-logout me-1"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </nav>
+                            </div>
+                            <!-- /User menu -->
+                        </div>
+                        <!-- /Account menu -->
+                    </div>
+                    <div class="col-24 col-xl-19">
+                        <div class="row">
+                            <div class="col-12 col-xl-6">
+                                <!-- Wishlist -->
+                                <div class="card shadow-sm mb-10">
+                                    <div class="card-header bg-transparent pt-6 pb-6">
+                                        <h2 class="h3 mb-0">Wishlist</h2>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a class="d-inline-block text-body pt-4 pb-4 pt-md-8 pb-md-8 display-6" href="./wishlist.html">
+                                            <div class="mb-2"><i class="ti ti-heart text-primary"></i></div>
+                                            <h5 class="mb-0">8 tours</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Wishlist -->
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <!-- Booking -->
+                                <div class="card shadow-sm mb-10">
+                                    <div class="card-header bg-transparent pt-6 pb-6">
+                                        <h2 class="h3 mb-0">Booking</h2>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a class="d-inline-block text-body pt-4 pb-4 pt-md-8 pb-md-8 display-6" href="./booking.html">
+                                            <div class="mb-2"><i class="ti ti-calendar text-primary"></i></div>
+                                            <h5 class="mb-0">5 tours</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Booking -->
+                            </div>
+                            <div class="col-24 col-xl-12">
+                                <!-- Your Profile -->
+                                <div class="card shadow-sm mb-10">
+                                    <div class="card-header bg-transparent pt-6 pb-6">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <h2 class="h3 mb-0">Your profile</h2>
+                                            <a href="./setting.html" class="fw-medium fsm-2 text-secondary link-hover-primary">
+                                                <i class="ti ti-edit"></i>
+                                                <span>Edit profile</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-24 ">
+                                                <div class="mb-3">
+                                                    <label class="m-w-125">Full Name:</label>
+                                                    <strong>Mr. Jonh Deep </strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-24">
+                                                <div class="mb-3">
+                                                    <label class="m-w-125">Email:</label>
+                                                    <strong>booking@example.com </strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-24">
+                                                <div class="mb-3">
+                                                    <label class="m-w-125">Phone:</label>
+                                                    <strong>+33 (0) 1 89 78 67 56 </strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-24">
+                                                <div class="mb-3">
+                                                    <label class="m-w-125">Country:</label>
+                                                    <strong>United States</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /Your Profile -->
+                            </div>
+                        </div>
+                        <!-- Recent Booking-->
+                        <div class="card shadow-sm mb-10">
+                            <div class="card-header bg-transparent pt-6 pb-6">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h2 class="h3 mb-0">Recent Bookings</h2>
+                                    <a href="./booking.html" class="fw-medium fsm-2 text-secondary link-hover-primary">
+                                        <i class="ti ti-edit"></i>
+                                        <span>All Bookings</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="text-nowrap">Tour name</th>
+                                                <th scope="col" class="text-nowrap">Book Code</th>
+                                                <th scope="col" class="text-nowrap">Amount</th>
+                                                <th scope="col" class="text-nowrap">Book date</th>
+                                                <th scope="col" class="text-nowrap">Status</th>
+                                                <th scope="col" class="text-nowrap">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Booking item -->
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <a href="./booking-detail.html" class="mb-2 d-block fw-bold text-body link-hover-primary"> Louvre Museum Guided Tour with Skip the Line Entrance </a>
+                                                        <div class="fsm-4 text-secondary">
+                                                            <span class="text-nowrap">Date: Mar 05 2023 - Mar 08 2023</span>
+                                                            <br>
+                                                            <span class="text-nowrap">Guest: 4 Adults/3 Children</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="text-nowrap">#B0123</span>
+                                                </td>
+                                                <td>
+                                                    <strong><sup>$</sup>310.50</strong>
+                                                </td>
+                                                <td>
+                                                    <span class="text-nowrap small">10:30<br>Feb 21 2023</span>
+                                                </td>
+                                                <td class="text-nowrap"><span class="badge text-bg-success w-100 lh-1 text-uppercase fsm-7">Completed</span></td>
+                                                <td>
+                                                    <div class="d-inline-flex">
+                                                        <a href="./booking-detail.html" class="me-4 fs-4" title="Detail booking">
+                                                            <i class="ti ti-clipboard-text"></i>
+                                                        </a>
+                                                        <a href="#" class="link-danger fs-4" title="Delete booking">
+                                                            <i class="ti ti-trash"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- /Booking item -->
+                                            <!-- Booking item -->
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <a href="./booking-detail.html" class="mb-2 d-block fw-bold text-body link-hover-primary"> Eiffel Tower Direct Access Optional Summit Access </a>
+                                                        <div class="fsm-4 text-secondary">
+                                                            <span class="text-nowrap">Date: Mar 05 2023 - Mar 08 2023</span>
+                                                            <br>
+                                                            <span class="text-nowrap">Guest: 4 Adults/3 Children</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="text-nowrap">#B0143</span>
+                                                </td>
+                                                <td>
+                                                    <strong><sup>$</sup>140.50</strong>
+                                                </td>
+                                                <td>
+                                                    <span class="text-nowrap fs-7">10:30<br>Feb 21 2023</span>
+                                                </td>
+                                                <td class="text-nowrap"><span class="badge text-bg-secondary w-100 lh-1 text-uppercase fsm-7">Cancelled</span></td>
+                                                <td>
+                                                    <div class="d-inline-flex">
+                                                        <a href="./booking-detail.html" class="me-4 fs-4" title="Detail booking">
+                                                            <i class="ti ti-clipboard-text"></i>
+                                                        </a>
+                                                        <a href="#" class="link-danger fs-4" title="Delete booking">
+                                                            <i class="ti ti-trash"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- /Booking item -->
+                                            <!-- Booking item -->
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <a href="./booking-detail.html" class="mb-2 d-block fw-bold text-body link-hover-primary"> Versailles Skip-the-Line Tour & Gardens Access </a>
+                                                        <div class="fsm-4 text-secondary">
+                                                            <span class="text-nowrap">Date: Mar 05 2023 - Mar 08 2023</span>
+                                                            <br>
+                                                            <span class="text-nowrap">Guest: 4 Adults/3 Children</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="text-nowrap">#B0928</span>
+                                                </td>
+                                                <td>
+                                                    <strong><sup>$</sup>120.50</strong>
+                                                </td>
+                                                <td>
+                                                    <span class="text-nowrap fs-7">10:30<br>Feb 21 2023</span>
+                                                </td>
+                                                <td class="text-nowrap"><span class="badge text-bg-warning w-100 lh-1 text-uppercase fsm-7">Processing</span></td>
+                                                <td>
+                                                    <div class="d-inline-flex">
+                                                        <a href="./booking-detail.html" class="me-4 fs-4" title="Detail booking">
+                                                            <i class="ti ti-clipboard-text"></i>
+                                                        </a>
+                                                        <a href="#" class="link-danger fs-4" title="Delete booking">
+                                                            <i class="ti ti-trash"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- /Booking item -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Recent Booking-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Dashboard -->
+    </main>
+    <!-- Footer -->
+    <footer id="footer" class="pt-14 pb-12 mt-14  border-top border-secondary-subtle bg-dark" data-bs-theme="dark">
+        <div class="container">
+            <!-- Brands system -->
+            <div class="border-bottom mb-9 pb-5 text-body-tertiary">
+                <div class="row" data-cues="fadeIn">
+                    <div class="col-12 col-lg-4 col-md-8">
+                        <figure>
+                            <img class="img-fluid" src="./assets/img/logos/l1.png" srcset="./assets/img/logos/l1@2x.png 2x" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-8">
+                        <figure>
+                            <img class="img-fluid" src="./assets/img/logos/l2.png" srcset="./assets/img/logos/l2@2x.png 2x" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-8">
+                        <figure>
+                            <img class="img-fluid" src="./assets/img/logos/l3.png" srcset="./assets/img/logos/l3@2x.png 2x" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-8">
+                        <figure>
+                            <img class="img-fluid" src="./assets/img/logos/l4.png" srcset="./assets/img/logos/l4@2x.png 2x" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-8">
+                        <figure>
+                            <img class="img-fluid" src="./assets/img/logos/l5.png" srcset="./assets/img/logos/l5@2x.png 2x" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-8">
+                        <figure>
+                            <img class="img-fluid" src="./assets/img/logos/l6.png" srcset="./assets/img/logos/l6@2x.png 2x" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!-- /Brands system -->
+            <!-- Footer top -->
+            <div class="border-bottom text-body-tertiary">
+                <div class="row" data-cues="fadeIn">
+                    <div class="col-24 col-xl-6 col-lg-24 col-md-12">
+                        <!-- Brand -->
+                        <div class="mb-8">
+                            <a href="./index.html" class="d-inline-flex align-items-center fs-3 fw-semibold text-white mb-6">
+                                <figure class="mb-0 me-3">
+                                    <img class="img-fluid" src="./assets/img/logos/footer-light.png" srcset="./assets/img/logos/footer-light@2x.png 2x" alt="">
+                                </figure>
+                                <span>Evargo</span>
+                            </a>
+                            <p>
+                                <em>Sed diam constituam ei, qui erat probo dissentiet ex. Id vim libris volutpat, pri cu errem timeam cotidieque, purto summo has te. An quis eligendi atomorum duo, latine veritus vituperata vim.</em>
+                                <a href="./about.html" class="text-body link-hover-primary">[+]</a>
+                            </p>
+                        </div>
+                        <!-- /Brand -->
+                    </div>
+                    <div class="col-24 col-xl-6 col-lg-8 col-md-12">
+                        <!-- Contact Info -->
+                        <div class="mb-8">
+                            <h5 class="text-body-emphasis">Contact Info</h5>
+                            <div class="pt-2">
+                                <p>
+                                    <span>610 Placer Loquen, Paris, France.</span>
+                                </p>
+                                <p>
+                                    <span>+33 321-654-9876 (Ext: 123).</span>
+                                </p>
+                                <p>
+                                    <a href="#" class="text-body link-hover-primary">Booking@example.com</a>
+                                </p>
+                                <p>
+                                    <a href="#" class="text-body link-hover-primary">www.example.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /Contact Info -->
+                    </div>
+                    <div class="col-24 col-xl-6 col-lg-8 col-md-12">
+                        <!-- Quick Links -->
+                        <div class="mb-8">
+                            <h5 class="text-body-emphasis">Quick Links</h5>
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./about.html">About us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./post-grid.html">Blog</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./contact.html">Contact Us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./dashboard.html">My Account</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./tour-list.html">Special offers</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./explore.html">Explore France</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./destinations.html">Destinations</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./tour-list.html">France tours</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Quick Links -->
+                    </div>
+                    <div class="col-24 col-xl-6 col-lg-8 col-md-12">
+                        <div class="mb-8">
+                            <!-- Mobile App -->
+                            <div class="mb-6">
+                                <h5 class="text-body-emphasis">Get the app</h5>
+                                <div class="pt-4">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a href="#">
+                                                <figure>
+                                                    <img src="./assets/img/icons/i1.svg" class="img-fluid" alt="">
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#">
+                                                <figure>
+                                                    <img src="./assets/img/icons/i2.svg" class="img-fluid" alt="">
+                                                </figure>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /Mobile App -->
+                            <!-- Social -->
+                            <div class="mb-6">
+                                <h5 class="text-body-emphasis">Connect social</h5>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-body link-hover-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-body link-hover-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-body link-hover-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                                                <path d="M10 9l5 3l-5 3z"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-body link-hover-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M8 20l4 -9"></path>
+                                                <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
+                                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-body link-hover-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tripadvisor" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M6.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
+                                                <path d="M17.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
+                                                <path d="M17.5 9a4.5 4.5 0 1 0 3.5 1.671l1 -1.671h-4.5z"></path>
+                                                <path d="M6.5 9a4.5 4.5 0 1 1 -3.5 1.671l-1 -1.671h4.5z"></path>
+                                                <path d="M10.5 15.5l1.5 2l1.5 -2"></path>
+                                                <path d="M9 6.75c2 -.667 4 -.667 6 0"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /Social -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Footer top -->
+            <!-- Footer Bottom -->
+            <div class="mt-9 text-body-tertiary" data-bs-theme="dark">
+                <div class="row">
+                    <div class="col-24 col-md-12">
+                        <p>© 2023 Evargo. All rights reserved.</p>
+                    </div>
+                    <div class="col-24 col-md-12">
+                        <div class="text-start text-md-end">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a class="text-body link-hover-primary" href="./blank.html">Privacy Policy</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-body link-hover-primary" href="./blank.html">Terms of Use</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Footer Bottom -->
+        </div>
+    </footer>
+    <!-- Scroll top -->
+    <a href="#" class="scroll-top active"><i class="ti ti-chevron-up"></i></a>
+    <!-- /Scroll top -->
+
+    <!-- /Footer -->
+    <!-- Scripts -->
+
+    <script src="./assets/js/js.js"></script>
+    <!-- /Scripts -->
+</body>
+
+</html>

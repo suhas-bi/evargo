@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Evargo</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link href="./assets/img/logos/favicon.png" rel="shortcut icon">
+    <link href="./assets/css/style.css" rel="stylesheet">
+
+
+</head>
+<!-- /Head -->
+<!-- Set Body to full screen when Preloader is showing. -->
+
+<body class="vh-100 vw-100 overflow-hidden">
+    <!-- Header -->
+    <!-- Preloader -->
+    <div class="position-fixed top-0 bottom-0 bg-body vw-100 z-1100 d-flex align-items-center justify-content-center" id="preloader">
+        <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <!-- /Preloader -->
+    <!-- Language modal -->
+    <div class="modal fade" id="mdlLanguage" tabindex="-1" aria-labelledby="h3Language" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="h3Language">Select language</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav small row mb-0" data-lang-list>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="en" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/en.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">English</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="fr" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/fr.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Français</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="es" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/es.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Español</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="de" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/de.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Deutsch</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="it" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/it.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Italiano</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="nl" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/nl.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Nederlands</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="pt" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/pt.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Português</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="ru" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/ru.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Русский</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-12 col-lg-8">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-lang-toggle="cn" data-bs-dismiss="modal">
+                                <img src="./assets/img/flags/cn.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">日本語</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Language modal -->
+    <!-- Currency modal -->
+    <div class="modal fade" id="mdlCurrency" tabindex="-1" aria-labelledby="h3Currency" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="h3Currency">Select currency</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav small row mb-0" data-currency-list>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="usd" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">usd</strong> - United States Dollar</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="eur" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">eur</strong> - European Union</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="gbp" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">gbp</strong> - Pound Sterling</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="aud" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">aud</strong> - Australian Dollar</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="nzd" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">nzd</strong> - New Zealand Dollar</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="cad" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">cad</strong> - Canadian Dollar</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="jpy" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">jpy</strong> - Japanese Yen</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="cny" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">cny</strong> - Chinese Yuan</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="vnd" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">vnd</strong> - Vietnam Dong</span>
+                            </span>
+                        </li>
+                        <li class="nav-item col-24 col-lg-12">
+                            <span class="nav-link text-body link-hover-primary cursor-pointer d-flex align-items-center ps-0 ps-0" data-currency-toggle="sgd" data-bs-dismiss="modal">
+                                <span class="me-1"><strong class="text-uppercase">sgd</strong> - Singapore Dollar</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Currency modal -->
+    <!-- Modal Login -->
+    <div class="modal fade" id="mdlLogin" data-bs-keyboard="false" tabindex="-1" aria-labelledby="mdlLoginTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="mdlLoginTitle">Login to Evargo</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation pt-2" method="post" novalidate="" action="./dashboard.html">
+                        <!-- Login Facebook/Google -->
+                        <div class="row g-4 mb-8">
+                            <div class="col-12">
+                                <button type="button" class="btn btn-outline-light text-secondary d-flex align-items-center justify-content-center shadow-sm w-100 border">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 1000 1000" width="20" height="20">
+                                        <path fill="#3b579d" d="M500 1000A500 500 0 0 1 500 0a500 500 0 0 1 0 1000z" />
+                                        <path fill="#fff" d="M630 1000V613h130l20-151H630v-97c0-43 12-73 75-73h80V157c-14-2-62-6-117-6-115 0-194 70-194 200v111H344v151h130v387h156z" />
+                                    </svg>
+                                    <span class="ms-3">Facebook</span>
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="btn btn-outline-light text-secondary d-flex align-items-center justify-content-center shadow-sm w-100 border">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 534 544" width="20" height="20">
+                                        <path fill="#4285f4" d="M534 278c0-18-2-37-5-55H272v105h147c-6 34-26 64-54 83v68h87c52-48 82-118 82-201z" />
+                                        <path fill="#34a853" d="M272 544c74 0 135-24 181-65l-88-68c-25 16-56 26-93 26-71 0-131-48-153-113H29v70c46 92 140 150 243 150z" />
+                                        <path fill="#fbbc04" d="M119 324c-11-33-11-70 0-104v-70H29c-39 77-39 168 0 244l90-70z" />
+                                        <path fill="#ea4335" d="M272 108c39-1 76 14 105 41l77-78a272 272 0 0 0-425 79l90 70c22-64 82-112 153-112z" />
+                                    </svg>
+                                    <span class="ms-3">Google</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /Login Facebook/Google -->
+                        <hr>
+                        <!-- Login Email -->
+                        <div class="mb-8">
+                            <div class="mb-6">
+                                <label for="txtEmail2" class="form-label">Email<span class="text-danger">*</span></label>
+                                <input class="form-control shadow-sm" type="email" id="txtEmail2" name="username2" value="" placeholder="" required="">
+                                <div class="invalid-feedback"> Please enter email. </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="txtPassword2" class="form-label">Password<span class="text-danger">*</span></label>
+                                <input class="form-control shadow-sm" id="txtPassword2" name="password2" placeholder="" value="" type="password" required="">
+                                <div class="invalid-feedback"> Please enter password. </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-5">
+                                        <div class="form-check">
+                                            <input class="form-check-input shadow-sm" type="checkbox" value="" id="chkRemember2">
+                                            <label class="form-check-label" for="chkRemember2"><span class="text-body">Remember me</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-5 text-end">
+                                        <a href="#mdlForgotPassword" data-bs-toggle="modal">Forgot password?</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-5">
+                                <button type="submit" class="btn btn-primary w-50" id="btnSubmit2">
+                                    <i class="ti ti-lock"></i>
+                                    <span>Login</span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="mb-2"> New here? <a href="#mdlRegister" data-bs-toggle="modal">Create an account</a>
+                        </div>
+                        <!-- /Login Email -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal Login -->
+    <!-- Modal Forgot Password -->
+    <div class="modal fade" id="mdlForgotPassword" data-bs-keyboard="false" tabindex="-1" aria-labelledby="mdlForgotPasswordTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="mdlForgotPasswordTitle">Forgot Password</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" method="post" novalidate="" action="./new-password.html">
+                        <div class="mb-5">
+                            <label for="txtEmail4" class="form-label">Email<span class="text-danger">*</span></label>
+                            <input class="form-control shadow-sm" type="email" id="txtEmail4" name="username4" value="" placeholder="" required="">
+                            <div class="invalid-feedback"> Please enter Email. </div>
+                        </div>
+                        <p><strong class="fw-medium">Note:</strong> A link will be sent to your mail, you need to click on it to create a new password.</p>
+                        <div class="mb-5">
+                            <button type="submit" class="btn btn-primary w-50" id="btnSubmit4">
+                                <i class="ti ti-mail"></i>
+                                <span>Send link</span>
+                            </button>
+                        </div>
+                        <hr>
+                        <div class="mb-2"> Remember Password? <a href="#mdlLogin" data-bs-toggle="modal">Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal Forgot Password -->
+    <!-- Modal Register -->
+    <div class="modal fade" id="mdlRegister" data-bs-keyboard="false" tabindex="-1" aria-labelledby="mdlRegisterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="mdlRegisterTitle">Register for Evargo</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation pt-2" method="post" novalidate="" action="./login.html">
+                        <!-- Login Facebook/Google -->
+                        <div class="row g-4 mb-5">
+                            <div class="col-12">
+                                <button type="button" class="btn btn-outline-light text-secondary d-flex align-items-center justify-content-center shadow-sm w-100 border">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 1000 1000" width="20" height="20">
+                                        <path fill="#3b579d" d="M500 1000A500 500 0 0 1 500 0a500 500 0 0 1 0 1000z" />
+                                        <path fill="#fff" d="M630 1000V613h130l20-151H630v-97c0-43 12-73 75-73h80V157c-14-2-62-6-117-6-115 0-194 70-194 200v111H344v151h130v387h156z" />
+                                    </svg>
+                                    <span class="ms-3">Facebook</span>
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="btn btn-outline-light text-secondary d-flex align-items-center justify-content-center shadow-sm w-100 border">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 534 544" width="20" height="20">
+                                        <path fill="#4285f4" d="M534 278c0-18-2-37-5-55H272v105h147c-6 34-26 64-54 83v68h87c52-48 82-118 82-201z" />
+                                        <path fill="#34a853" d="M272 544c74 0 135-24 181-65l-88-68c-25 16-56 26-93 26-71 0-131-48-153-113H29v70c46 92 140 150 243 150z" />
+                                        <path fill="#fbbc04" d="M119 324c-11-33-11-70 0-104v-70H29c-39 77-39 168 0 244l90-70z" />
+                                        <path fill="#ea4335" d="M272 108c39-1 76 14 105 41l77-78a272 272 0 0 0-425 79l90 70c22-64 82-112 153-112z" />
+                                    </svg>
+                                    <span class="ms-3">Google</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /Login Facebook/Google -->
+                        <hr>
+                        <!-- Register -->
+                        <div class="row">
+                            <div class="col-24">
+                                <div class="mb-5">
+                                    <label for="txtEmail3" class="form-label">Email<span class="text-danger">*</span></label>
+                                    <input class="form-control shadow-sm" id="txtEmail3" type="email" name="email3" value="" placeholder="" required="">
+                                    <div class="invalid-feedback"> Please enter Email. </div>
+                                </div>
+                            </div>
+                            <div class="col-24">
+                                <div class="mb-5">
+                                    <label for="txtPassword3" class="form-label">Password<span class="text-danger">*</span></label>
+                                    <input class="form-control shadow-sm" id="txtPassword3" name="password3" placeholder="" value="" type="password" required="">
+                                    <div class="invalid-feedback"> Please enter password. </div>
+                                </div>
+                            </div>
+                            <div class="col-24">
+                                <div class="mb-5">
+                                    <label for="txtRetypePassword3" class="form-label">Retype password<span class="text-danger">*</span></label>
+                                    <input class="form-control shadow-sm" id="txtRetypePassword3" name="retypepassword3" placeholder="" value="" type="password" required="">
+                                    <div class="invalid-feedback"> Please enter password. </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check mb-6">
+                            <input class="form-check-input shadow-sm" type="checkbox" value="" id="chckAgree3" required="">
+                            <label class="form-check-label" for="chckAgree3"> I agree to <a href="#" class="hover">terms and policy<span class="text-danger">*</span></a>. </label>
+                        </div>
+                        <div class="mb-5">
+                            <button class="btn btn-primary w-50" id="btnSubmit3">
+                                <i class="ti ti-user"></i>
+                                <span>Register</span>
+                            </button>
+                        </div>
+                        <hr>
+                        <div class="mb-2"> Already have an account? <a href="#mdlLogin" data-bs-toggle="modal">Login</a>
+                        </div>
+                        <!-- /Register -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal Register -->
+    <!-- Quick View Cart -->
+    <div class="offcanvas offcanvas-end border-start-0" tabindex="-1" id="OcCart" aria-labelledby="OcViewCart">
+        <div class="offcanvas-header border-bottom">
+            <h4 class="offcanvas-title h3" id="OcViewCart">Shopping Cart</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Shopping Cart -->
+            <ul class="list-group list-group-flush tour-cart mb-6">
+                <li class="list-group-item pt-6 pb-6 ps-0 pe-0">
+                    <!-- Tour -->
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 position-relative">
+                            <a href="./single-tour.html" class="d-block">
+                                <figure class="image-hover-scale image-hover-overlay rounded mb-0">
+                                    <img src="./assets/img/tours/t33.jpg" srcset="./assets/img/tours/t33@2x.jpg 2x" alt="..." width="90">
+                                </figure>
+                            </a>
+                            <a href="javascript:;" class="position-absolute top-0 end-0 m-1 lh-1 p-1 fsm-8 text-white rounded-circle bg-dark bg-opacity-50"><i class="ti ti-x"></i></a>
+                        </div>
+                        <div class="flex-grow-1 ms-5">
+                            <h6 class="fw-semibold fsm-2 mb-2">
+                                <a href="./single-tour.html" class="text-body link-hover-primary">Louvre Museum Guided Tour with Skip the Line Entrance</a>
+                            </h6>
+                            <div class="fsm-3 text-secondary">
+                                <span class="me-2">From: <strong class="text-danger"><sup>$</sup>95.85</strong></span>
+                                <del class="old-price">
+                                    <span class="text-secondary"><sup>$</sup>115.85</span>
+                                </del>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tour -->
+                </li>
+                <li class="list-group-item pt-6 pb-6 ps-0 pe-0">
+                    <!-- Tour -->
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 position-relative">
+                            <a href="./single-tour.html" class="d-block">
+                                <figure class="image-hover-scale image-hover-overlay rounded mb-0">
+                                    <img src="./assets/img/tours/t34.jpg" srcset="./assets/img/tours/t34@2x.jpg 2x" alt="..." width="90">
+                                </figure>
+                            </a>
+                            <a href="javascript:;" class="position-absolute top-0 end-0 m-1 lh-1 p-1 fsm-8 text-white rounded-circle bg-dark bg-opacity-50"><i class="ti ti-x"></i></a>
+                        </div>
+                        <div class="flex-grow-1 ms-5">
+                            <h6 class="fw-semibold fsm-2 mb-2">
+                                <a href="./single-tour.html" class="text-body link-hover-primary">Eiffel Tower Direct Access Optional Summit Access</a>
+                            </h6>
+                            <div class="fsm-3 text-secondary">
+                                <span class="me-2">From: <strong class="text-danger"><sup>$</sup>95.85</strong></span>
+                                <del class="old-price">
+                                    <span class="text-secondary"><sup>$</sup>115.85</span>
+                                </del>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tour -->
+                </li>
+                <li class="list-group-item pt-6 pb-6 ps-0 pe-0">
+                    <!-- Tour -->
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 position-relative">
+                            <a href="./single-tour.html" class="d-block">
+                                <figure class="image-hover-scale image-hover-overlay rounded mb-0">
+                                    <img src="./assets/img/tours/t35.jpg" srcset="./assets/img/tours/t35@2x.jpg 2x" alt="..." width="90">
+                                </figure>
+                            </a>
+                            <a href="javascript:;" class="position-absolute top-0 end-0 m-1 lh-1 p-1 fsm-8 text-white rounded-circle bg-dark bg-opacity-50"><i class="ti ti-x"></i></a>
+                        </div>
+                        <div class="flex-grow-1 ms-5">
+                            <h6 class="fw-semibold fsm-2 mb-2">
+                                <a href="./single-tour.html" class="text-body link-hover-primary">Saint-Emilion and Medoc Full-Day Wine Experience</a>
+                            </h6>
+                            <div class="fsm-3 text-secondary">
+                                <span class="me-2">From: <strong class="text-danger"><sup>$</sup>95.85</strong></span>
+                                <del class="old-price">
+                                    <span class="text-secondary"><sup>$</sup>115.85</span>
+                                </del>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tour -->
+                </li>
+            </ul>
+            <!-- /Checkout -->
+            <div class="mb-4 text-end">
+                <div class="mb-4">
+                    <div class="mb-8">
+                        <div>
+                            <span class="fw-semibold h5">Total (3 items):</span>
+                            <span class="h3 text-danger fw-bolder"><sup>$</sup>285.85</span>
+                        </div>
+                        <p class="text-secondary text-end fsm-3">
+                            <em>* All taxes and fees included</em>
+                        </p>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <a href="./shopping-cart.html" class="btn btn-outline-primary w-100">
+                                <i class="ti ti-shopping-bag"></i>
+                                <span>View Cart</span>
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <a href="./checkout.html" class="btn btn-primary w-100">
+                                <i class="ti ti-credit-card"></i>
+                                <span>Checkout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Checkout -->
+        </div>
+    </div>
+    <!-- /Quick View Cart -->
+    <!-- Header -->
+    <header id="header" class="header">
+        <nav class="navbar navbar-main navbar-expand-xl fw-semibold">
+            <div class="container">
+                <!-- Brand -->
+                <a class="navbar-brand d-inline-flex align-items-center" id="brandHeader" href="./index.html">
+                    <img src="./assets/img/logos/logo.png" srcset="./assets/img/logos/logo@2x.png 2x" class="logo" alt="">
+                    <span class="text-body-emphasis fs-2 ms-4">Evargo</span>
+                </a>
+                <!-- /Brand -->
+                <!-- offcanvas Navbar -->
+                <div class="offcanvas offcanvas-navbar offcanvas-end border-start-0" tabindex="-1" id="offcanvasNavbar">
+                    <!-- Offcanvas header -->
+                    <div class="offcanvas-header pb-0">
+                        <h3 class="offcanvas-title h1 text-body-emphasis" id="bdSidebarOffcanvasLabel">Evargo</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <!-- /Offcanvas header -->
+                    <div class="offcanvas-body justify-content-between">
+                        <!-- Navbar nav-->
+                        <ul class="navbar-nav align-items-xl-center">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle-hover   " href="./index.html" data-bs-display="static">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown mega-menu">
+                                <a class="nav-link dropdown-toggle-hover " href="./explore.html" data-bs-display="static">
+                                    <span>Explore</span>
+                                    <i class="ti ti-chevron-down dropdown-toggle-icon"></i>
+                                </a>
+                                <div class="dropdown-menu mt-xl-8 pt-xl-6 pb-xl-6 ps-xl-4 pe-xl-4" data-bs-popper="static">
+                                    <div class="d-block d-xl-flex">
+                                        <div class="d-none d-xl-block mt-3 ms-5 me-3">
+                                            <a href="./destinations.html">
+                                                <figure class="figure mb-0 image-hover-scale image-hover-overlay rounded-1">
+                                                    <img src="./assets/img/about/a1.jpg" srcset="./assets/img/about/a1@2x.jpg 2x" class="img-fluid" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="mb-4 mb-xl-0">
+                                            <h6 class="mega-menu-title">Destinations</h6>
+                                            <ul class="list-unstyled ms-6 ms-xl-0 mb-4 mb-xl-0">
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Paris</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Nice</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Marseille</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Cannes</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Monaco</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Geneva</a></li>
+                                                <li>
+                                                    <a class="mega-menu-item" href="./destinations.html">
+                                                        <span>See all</span>
+                                                        <i class="ti ti-plus"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="mb-4 mb-xl-0">
+                                            <h6 class="mega-menu-title">Categories</h6>
+                                            <ul class="list-unstyled ms-6 ms-xl-0 mb-4 mb-xl-0">
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Ecotourism & Resort</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Cultural & Foods</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Explorer & Adventure</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Festival & Events</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Museums & Exhibitions</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Hiking & Trekking</a></li>
+                                                <li><a class="mega-menu-item" href="./tour-grid.html">Ships & boats</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle-hover " href="./tour-grid.html" data-bs-display="static">
+                                    <span>Tours</span>
+                                    <i class="ti ti-chevron-down dropdown-toggle-icon"></i>
+                                </a>
+                                <ul class="dropdown-menu mt-xl-8" data-bs-popper="static">
+                                    <li><a class="dropdown-item " href="./destinations.html">Destinations</a></li>
+                                    <li><a class="dropdown-item " href="./tour-list.html">Tours list</a></li>
+                                    <li><a class="dropdown-item " href="./tour-grid.html">Tours grid</a></li>
+                                    <li><a class="dropdown-item " href="./single-tour.html">Single tour</a></li>
+                                    <li><a class="dropdown-item " href="./shopping-cart.html">Book tour</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown mega-menu">
+                                <a class="nav-link dropdown-toggle-hover active" href="javascript:void(0);" data-bs-display="static">
+                                    <span>Pages</span>
+                                    <i class="ti ti-chevron-down dropdown-toggle-icon"></i>
+                                </a>
+                                <div class="dropdown-menu mt-xl-8 pt-xl-6 pb-xl-6 ps-xl-4 pe-xl-4" data-bs-popper="static">
+                                    <div class="d-block d-xl-flex">
+                                        <div class="mb-4 mb-xl-0">
+                                            <h6 class="mega-menu-title">My Account</h6>
+                                            <ul class="list-unstyled ms-6 ms-xl-0 mb-4 mb-xl-0">
+                                                <li><a class="mega-menu-item " href="./shopping-cart.html">Shopping Cart</a></li>
+                                                <li><a class="mega-menu-item " href="./dashboard.html">Dashboard</a></li>
+                                                <li><a class="mega-menu-item " href="./wishlist.html">Wishlist</a></li>
+                                                <li><a class="mega-menu-item " href="./booking.html">Booking</a></li>
+                                                <li><a class="mega-menu-item " href="./setting.html">Setting</a></li>
+                                                <li><a class="mega-menu-item " href="./register.html">Register</a></li>
+                                                <li><a class="mega-menu-item " href="./login.html">Login</a></li>
+                                                <li><a class="mega-menu-item " href="./forgot-password.html">Forgot password</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mb-4 mb-xl-0">
+                                            <h6 class="mega-menu-title">Other pages</h6>
+                                            <ul class="list-unstyled ms-6 ms-xl-0 mb-4 mb-xl-0">
+                                                <li><a class="mega-menu-item active" href="./about.html">About</a></li>
+                                                <li>
+                                                    <a class="mega-menu-item" href="./post-grid.html">Blog</a>
+                                                    <ul class="list-unstyled ms-6">
+                                                        <li><a class="mega-menu-item " href="./post-grid.html">- Post grid</a></li>
+                                                        <li><a class="mega-menu-item " href="./post-list.html">- Post list</a></li>
+                                                        <li><a class="mega-menu-item " href="./single-post.html">- Single post</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a class="mega-menu-item " href="./contact.html">Contact</a></li>
+                                                <li><a class="mega-menu-item" href="./coming-soon.html">Coming soon</a></li>
+                                                <li><a class="mega-menu-item" href="./404.html">404</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown d-none">
+                                <a class="nav-link" href="#" target="_blank">
+                                    <i class="ti ti-shopping-cart"></i>
+                                    <span>Buy now</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /Navbar nav -->
+                        <!-- Sub Links -->
+                        <div class="d-flex align-items-center mt-4 mt-xl-0">
+                            <!-- Language & Currency -->
+                            <ul class="nav me-8">
+                                <li class="nav-item me-6">
+                                    <a class="text-body link-hover-primary d-flex align-items-center text-uppercase" data-bs-toggle="modal" href="#mdlLanguage">
+                                        <img src="./assets/img/flags/en.svg" class="me-2" height="16" alt="" id="imgFlag">
+                                        <span id="spnLang">en</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="text-body link-hover-primary d-flex text-uppercase" data-bs-toggle="modal" href="#mdlCurrency">
+                                        <span id="spnCurrency">usd</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- /Language & Currency -->
+                            <!-- Reservation -->
+                            <ul class="nav me-6">
+                                <li class="nav-item me-1">
+                                    <a href="wishlist.html" class="p-2 lh-1 text-body link-hover-primary border-0 fs-5"><i class="ti ti-heart"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="p-2 lh-1 text-body link-hover-primary border-0 fs-5 position-relative" data-bs-toggle="offcanvas" data-bs-target="#OcCart">
+                                        <span class="position-absolute top-0 end-0 p-1 bg-primary rounded-circle">
+                                            <span class="visually-hidden">Items in cart</span>
+                                        </span>
+                                        <i class="ti ti-shopping-bag"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- /Reservation -->
+                            <!-- /Sub Links -->
+                            <button type="button" id="toggle-theme" class="btn btn-sm btn-square rounded-circle text-body link-hover-primary border-0 fs-5">
+                                <i class="ti ti-sun"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- /offcanvas Navbar -->
+                <!-- Account link -->
+                <div class="ms-0 ms-xl-8 ms-auto">
+                    <a href="#mdlLogin" data-bs-toggle="modal" class="text-body link-hover-primary">
+                        <span class="fs-5"><i class="ti ti-lock"></i></span>
+                        <span>Login</span>
+                    </a>
+                </div>
+                <!-- /Account link -->
+                <!-- Nav toggler -->
+                <button class="navbar-toggler ms-6" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- /Nav toggler -->
+            </div>
+        </nav>
+    </header>
+    <!-- /Header -->
+    <!-- /Header -->
+    <main>
+        <!-- About -->
+        <section id="hero-carousel" class="pt-10">
+            <div class="container">
+                <!-- Caption-->
+                <div class="row g-0 g-lg-10 align-items-center">
+                    <div class="col-24 col-xl-12">
+                        <!-- Content -->
+                        <div class="mb-12 pt-10 pt-xl-0 pb-xl-0">
+                            <h2 class="display-4 fw-bold lh-sm text-body-emphasis mb-7"> About us </h2>
+                            <p class="fs-5 mb-6 text-secondary"> Founded in 1988, Tourgo is a leading company in the travel industry, offering high-quality tours to various destinations around the France. Tourgo is renowned for its reliability, professionalism and flexibility, as well as its excellent customer service and satisfaction. Customers who have joined the tour to France have praised Tourgo for its well-designed itinerary, knowledgeable guides, comfortable accommodation and transportation, and reasonable prices. </p>
+                            <a href="#mdlReadMore" data-bs-toggle="modal" class="fw-semibold">
+                                <span>Read more</span>
+                                <i class="ti ti-plus"></i>
+                            </a>
+                        </div>
+                        <!-- /Content -->
+                    </div>
+                    <div class="col-24 col-xl-12">
+                        <!-- Image box -->
+                        <div class="mb-10">
+                            <div class="bg-brand ps-0 ps-xxl-12 ps-xl-10">
+                                <!-- Backgound brand -->
+                                <div class="bg-brand-svg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1379 1200">
+                                        <path d="M1076.17 232c143.42 89.1 272.63 203.17 293.73 328.7 22.62 125.64-63.02 264.4-176.51 355.02-111.98 90.62-251.67 132.97-388.05 168-136.25 35.04-270.84 62.76-414.12 48.28-143.27-14.76-298.83-71.86-356.47-168.14-57.64-97.93-17.51-235.17 33.1-353.38a982.49 982.49 0 0 1 204.5-312.69c94.46-96.55 222.02-191.45 363.5-206.07 141.5-16 297.04 49.66 440.32 140.28Zm0 0" />
+                                    </svg>
+                                </div>
+                                <!-- /Backgound brand -->
+                                <!-- Image list -->
+                                <div class="row g-5 align-items-center">
+                                    <div class="col-12">
+                                        <div class="row g-0 justify-content-end mb-5">
+                                            <div class="col-18">
+                                                <!-- Image -->
+                                                <div class="img-info text-body link-hover-primary">
+                                                    <div class="img-info-shadow bg-body bg-opacity-90 rounded"></div>
+                                                    <figure class="img-info-thumbnail rounded">
+                                                        <img src="./assets/img/about/a7.jpg" srcset="./assets/img/about/a7@2x.jpg 2x" class="img-fluid" alt="">
+                                                    </figure>
+                                                    <div class="position-absolute top-50 start-50 translate-middle d-inline-block">
+                                                        <a class="btn-video-play btn-video-play-sm media-glightbox" href="./assets/media/v1.mp4"><span></span></a>
+                                                    </div>
+                                                </div>
+                                                <!-- /Image -->
+                                            </div>
+                                        </div>
+                                        <div class="row g-0 justify-content-start">
+                                            <div class="col-24">
+                                                <!-- Image -->
+                                                <div class="img-info img-info-right text-body link-hover-primary">
+                                                    <div class="img-info-shadow bg-body bg-opacity-90 rounded"></div>
+                                                    <figure class="img-info-thumbnail rounded">
+                                                        <img src="./assets/img/about/a5.jpg" srcset="./assets/img/about/a5@2x.jpg 2x" class="img-fluid" alt="">
+                                                    </figure>
+                                                </div>
+                                                <!-- /Image -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row g-0 justify-content-end mt-10 mt-md-0">
+                                            <div class="col-24">
+                                                <!-- Image -->
+                                                <div class="img-info img-info-top text-body link-hover-primary">
+                                                    <div class="img-info-shadow bg-body bg-opacity-90 rounded"></div>
+                                                    <figure class="img-info-thumbnail rounded">
+                                                        <img src="./assets/img/about/a6.jpg" srcset="./assets/img/about/a6@2x.jpg 2x" class="img-fluid" alt="">
+                                                    </figure>
+                                                </div>
+                                                <!-- /Image -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Image list -->
+                            </div>
+                        </div>
+                        <!-- /Image box -->
+                    </div>
+                </div>
+                <!-- /Caption-->
+                <!-- Modal Read More-->
+                <div class="modal fade" id="mdlReadMore" data-bs-keyboard="false" tabindex="-1" aria-labelledby="mdlReadMoreTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header border-bottom-0">
+                                <h3 class="modal-title" id="mdlReadMoreTitle">About Tourgo</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pt-0">
+                                <figure class="rounded overflow-hidden mb-4"><img loading="lazy" src="./assets/img/about/a8.jpg" srcset="./assets/img/about/a8@2x.jpg 2x" alt=""></figure>
+                                <p>Usu epicuri vituperatoribus at. Per ei soluta dolorem persequeris, at pri errem nihil. Eam at diam nibh reprehendunt, duo munere invenire ut. Est quem illud mazim eu, pri nostrud mentitum voluptatibus ex. Ea usu dico quando appareat.</p>
+                                <p>No eos virtute feugiat, et antiopam expetendis pro. Cum ludus nihil periculis in. Vis dico viris assueverit ei. Duo ubique ancillae albucius ex, dico agam antiopam ea pri. Vix ea nominavi petentium concludaturque. Antiopam voluptaria no eam. Eos in augue ocurreret.</p>
+                                <p>Recusabo dissentias pri id, ne cum munere doctus argumentum, usu augue referrentur cu. Elit oblique deseruisse est an, in diam ceteros duo. Rebum bonorum ex vis, in ius iusto scaevola. Te usu noster invenire, congue primis mei cu. Mea novum dissentiet ut, ut audiam verear discere est, ex deserunt instructior vel. Qui justo appareat praesent cu, ad saepe deserunt mei.</p>
+                                <p> Ea duo regione mandamus, his no illum omnium. Pro tota moderatius ut, quo veri equidem sensibus cu. Mei soluta recteque suavitate in. In vis soluta propriae, in est dolor ignota instructior, usu indoctum iudicabit intellegebat ex. Pro te tractatos patrioque. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Modal Read More-->
+            </div>
+        </section>
+        <!-- /About -->
+        <!-- Get started -->
+        <section id="started" class="pt-14 pb-10 text-center">
+            <div class="container">
+                <div class="card bg-primary bg-opacity-10 border-0">
+                    <div class="card-body pt-12 pb-14">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <div class="mb-8">
+                                    <h2 class="h1">Get started with us today</h2>
+                                    <p class="fs-5">Start a plan for your trips and adventures. Please contact us for advice.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix text-center">
+                            <a href="./tour-grid.html" class="btn btn-primary me-2 ms-2">
+                                <i class="ti ti-rocket"></i>
+                                <span>Start trips</span>
+                            </a>
+                            <a href="./contact.html" class="btn btn-outline-primary me-2 ms-2">
+                                <i class="ti ti-mail"></i>
+                                <span>Contact Us</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Get started  -->
+        <!-- Why choose -->
+        <section id="whyChoose" class="pt-14">
+            <div class="container">
+                <div class="row g-0 g-lg-8">
+                    <div class="col-24 col-xl-12 order-1 order-lg-0">
+                        <!-- Image list -->
+                        <div class="mb-10">
+                            <div class="bg-brand">
+                                <!-- Backgroud brand -->
+                                <div class="bg-brand-svg" data-cue="fadeIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1379 1200">
+                                        <path d="M1076.17 232c143.42 89.1 272.63 203.17 293.73 328.7 22.62 125.64-63.02 264.4-176.51 355.02-111.98 90.62-251.67 132.97-388.05 168-136.25 35.04-270.84 62.76-414.12 48.28-143.27-14.76-298.83-71.86-356.47-168.14-57.64-97.93-17.51-235.17 33.1-353.38a982.49 982.49 0 0 1 204.5-312.69c94.46-96.55 222.02-191.45 363.5-206.07 141.5-16 297.04 49.66 440.32 140.28Zm0 0" />
+                                    </svg>
+                                </div>
+                                <!-- /Backgroud brand -->
+                                <div class="row g-3 g-md-5 align-items-center">
+                                    <div class="col-12" data-cue="fadeIn">
+                                        <div class="row g-0 justify-content-end mt-10 mt-md-0">
+                                            <div class="col-24">
+                                                <!-- Image -->
+                                                <div class="img-info img-info-bottom">
+                                                    <div class="img-info-shadow bg-body bg-opacity-90 rounded"></div>
+                                                    <figure class="img-info-thumbnail rounded">
+                                                        <img src="./assets/img/about/a2.jpg" srcset="./assets/img/about/a2@2x.jpg 2x" class="img-fluid" alt="">
+                                                    </figure>
+                                                    <div class="img-info-body shadow d-none d-md-block">
+                                                        <h3 class="fs-5 mb-0 text-body-emphasis">
+                                                            <span>24,748</span>
+                                                        </h3>
+                                                        <p class="fsm-4 text-secondary mb-0">Tour booked</p>
+                                                    </div>
+                                                </div>
+                                                <!-- /Image -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12" data-cues="fadeIn">
+                                        <div class="row g-0 mb-3 mb-md-5">
+                                            <div class="col-18 col-md-12 col-xl-12">
+                                                <!-- Text -->
+                                                <div class="img-info">
+                                                    <div class="img-info-shadow bg-body bg-opacity-90 rounded"></div>
+                                                    <figure class="img-info-thumbnail opacity-0 z-n1">
+                                                        <img src="./assets/img/hero/h0.gif" class="img-fluid" alt="">
+                                                    </figure>
+                                                    <div class="bg-primary z-1 position-absolute bottom-0 end-0 top-0 start-0 rounded d-flex align-items-center justify-content-center">
+                                                        <div class="text-center">
+                                                            <h3 class="text-white h2 mb-0">32,745</h3>
+                                                            <span class="text-white fw-normal fsm-2">Clients Choice</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /Text -->
+                                            </div>
+                                        </div>
+                                        <div class="row g-0 justify-content-start">
+                                            <div class="col-24 col-md-20">
+                                                <!-- Image -->
+                                                <div class="img-info img-info-right">
+                                                    <div class="img-info-shadow bg-body bg-opacity-90 rounded"></div>
+                                                    <figure class="img-info-thumbnail rounded">
+                                                        <img src="./assets/img/about/a3.jpg" srcset="./assets/img/about/a3@2x.jpg 2x" class="img-fluid" alt="">
+                                                    </figure>
+                                                    <div class="img-info-body shadow d-none d-md-block">
+                                                        <h3 class="fs-5 mb-0 text-body-emphasis">
+                                                            <span>3,748</span>
+                                                        </h3>
+                                                        <p class="fsm-4 text-secondary mb-0">Attractive tours</p>
+                                                    </div>
+                                                </div>
+                                                <!-- /Image -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Image list -->
+                    </div>
+                    <div class="col-24 col-xl-12 order-0 order-lg-1">
+                        <div class="card border-0">
+                            <div class="card-body card-body p-0 p-lx-6">
+                                <!-- Heading -->
+                                <div class="mb-8">
+                                    <h2 class="h1 fw-bold text-body-emphasis">Why choose us?</h2>
+                                </div>
+                                <!-- /Heading -->
+                                <!-- Why list -->
+                                <ul class="list-unstyled" data-cues="fadeIn">
+                                    <li>
+                                        <div class="d-flex">
+                                            <div class="img-svg-gray me-5 mt-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 48 48">
+                                                    <defs>
+                                                        <path id="a" fill-rule="evenodd" d="M-.047 21.516v-.938c1.016-1 2.047-1.984 3.094-2.953 1.039.059 2.07.2 3.094.422.332-.05.644-.16.937-.328l5.438-6a943.397 943.397 0 0 1-9.282-6.516 1.254 1.254 0 0 1-.046-1.219l2.578-2.578c.175-.039.347-.086.515-.14a917.607 917.607 0 0 1 11.766 4.218 202.955 202.955 0 0 1 3.562-3.796C23.18.671 24.9.327 26.766.655c1.379.16 2.175.926 2.39 2.297.063.938.063 1.875 0 2.813-.062.39-.172.765-.328 1.125 7.805.796 13.54 4.64 17.203 11.53a22.363 22.363 0 0 1 1.547 4.5c-.113.763-.55 1.09-1.312.985a1.49 1.49 0 0 1-.516-.328c-.813-3.457-2.422-6.473-4.828-9.047a70.922 70.922 0 0 0-5.156 0c-.672.328-.953.875-.844 1.64-.11.767.172 1.313.844 1.642 2.12.05 3.449 1.097 3.984 3.14.063 1.625.063 3.25 0 4.875a5.987 5.987 0 0 1-1.219 3 275.562 275.562 0 0 0-6 6.094c-.09.176-.152.363-.187.562a27.117 27.117 0 0 0 0 3.188c.043.27.136.52.281.75l3.703 3.703c3.754-1.941 6.488-4.863 8.203-8.766a26.26 26.26 0 0 0 1.219-3.75c.426-.398.91-.476 1.453-.234.332.324.442.715.328 1.172-1.843 7.031-6.14 11.89-12.89 14.578-8.528 2.594-15.856.672-21.985-5.766-2.773-3.203-4.398-6.922-4.875-11.156l-1.968-5.156A246.71 246.71 0 0 0 .609 22.03a1.093 1.093 0 0 1-.656-.515ZM24.328 2.578c.781-.015 1.563 0 2.344.047a.674.674 0 0 1 .422.234c.578 2.047.062 3.75-1.547 5.11a1624.054 1624.054 0 0 0-14.953 13.453 3.973 3.973 0 0 0-.797 2.25c.14.812.25 1.625.328 2.437-.313.328-.64.641-.984.938a180.229 180.229 0 0 1-1.782-4.406 2.41 2.41 0 0 0-.468-.328l-3.938-1.5c-.137-.04-.183-.118-.14-.235.32-.367.68-.68 1.078-.937a7.591 7.591 0 0 0 3.187.234c.442-.113.848-.3 1.219-.563A789.303 789.303 0 0 0 22.03 4.079a4.35 4.35 0 0 1 2.297-1.5Zm-17.812.844A682.97 682.97 0 0 1 16.64 7.125a43.143 43.143 0 0 1-2.813 3.047 743.082 743.082 0 0 1-8.25-5.766c.332-.316.645-.644.938-.984Zm20.812 5.531c4.145-.058 7.895 1.113 11.25 3.516l-3.187.094c-1.715.578-2.528 1.78-2.438 3.609.035 2.457 1.285 3.723 3.75 3.797.563.25.922.672 1.078 1.265a51.797 51.797 0 0 1 0 4.407 3.976 3.976 0 0 1-.843 1.968l-5.813 5.813a4.918 4.918 0 0 0-.656 1.406 22.854 22.854 0 0 0-.094 3.938c.063.91.406 1.691 1.031 2.343l2.953 2.953a17.241 17.241 0 0 1-7.968 1.22 23.737 23.737 0 0 1-3.563-.61c-.015-1.875 0-3.75.047-5.625a103.309 103.309 0 0 0 3.656-3.75c.469-.973.407-1.91-.187-2.813a28.806 28.806 0 0 0-2.86-2.672c-.797-.328-1.578-.296-2.343.094l-1.594 1.407c-2.04.003-4.07.066-6.094.187a3.399 3.399 0 0 0-.656.375 51.736 51.736 0 0 1-1.875 1.828 13.453 13.453 0 0 1-1.078-4.406 22.382 22.382 0 0 0 2.344-2.531 16.072 16.072 0 0 0-.422-3.047c.05-.348.16-.676.328-.985l6-5.437a348.962 348.962 0 0 1 5.437 7.969c.266.39.563.75.89 1.078.384.156.759.125 1.126-.094.93-.867 1.789-1.79 2.578-2.766a.867.867 0 0 0 0-.562 1100.463 1100.463 0 0 0-3.797-11.11c.98-.972 1.98-1.925 3-2.859Zm-4.687 4.219a354.894 354.894 0 0 1 3.375 9.703c-.262.371-.575.7-.938.984a240.548 240.548 0 0 1-5.437-7.922 91.752 91.752 0 0 0 3-2.765Zm-.375 18.375c.168 0 .324.047.468.14.79.727 1.508 1.508 2.157 2.344a1.73 1.73 0 0 1-.141.328l-3.469 3.47-.281.562a86.804 86.804 0 0 0-.188 5.53c-3.937-1.714-6.953-4.448-9.046-8.202.78-.782 1.562-1.563 2.343-2.344l5.72-.094a2.56 2.56 0 0 0 1.124-.468c.426-.446.863-.868 1.313-1.266Zm0 0" />
+                                                        <path id="b" fill-rule="evenodd" d="M47.953 26.672v.937c-.508.614-1.07.676-1.687.188-.442-1.106-.067-1.621 1.125-1.547.203.125.39.266.562.422Zm0 0" />
+                                                    </defs>
+                                                    <use xlink:href="#a" />
+                                                    <use xlink:href="#b" />
+                                                </svg>
+                                            </div>
+                                            <div class="mb-2">
+                                                <h5 class="mb-2">Book with flexibility</h5>
+                                                <p>Book your trip easily and quickly, get free cancellation. Explore the magnificent and romantic France in your way.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex">
+                                            <div class="img-svg-gray me-5 mt-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 48 48">
+                                                    <path d="M24 47.46c-1.51 0-2.6-1.3-3.55-2.43-.54-.65-1.21-1.45-1.67-1.57a5.36 5.36 0 0 0-2.32.53c-1.37.5-2.93 1.06-4.2.33-1.27-.74-1.57-2.39-1.82-3.84a5.42 5.42 0 0 0-.68-2.24 5.45 5.45 0 0 0-2.24-.68c-1.45-.25-3.1-.54-3.84-1.83s-.17-2.82.33-4.19a5.36 5.36 0 0 0 .53-2.32c-.12-.45-.92-1.13-1.56-1.67C1.83 26.6.54 25.51.54 24s1.3-2.6 2.44-3.55c.64-.54 1.44-1.21 1.56-1.67A5.38 5.38 0 0 0 4 16.46c-.5-1.37-1.06-2.93-.33-4.2.74-1.28 2.39-1.57 3.83-1.82a5.45 5.45 0 0 0 2.24-.68 5.45 5.45 0 0 0 .69-2.24c.25-1.45.54-3.1 1.83-3.84 1.26-.73 2.82-.17 4.19.33a5.4 5.4 0 0 0 2.32.53c.45-.12 1.12-.92 1.66-1.56C21.4 1.83 22.5.54 24 .54s2.6 1.3 3.55 2.43c.54.65 1.21 1.45 1.67 1.57A5.42 5.42 0 0 0 31.54 4c1.37-.5 2.93-1.06 4.2-.33 1.27.74 1.57 2.39 1.82 3.84a5.42 5.42 0 0 0 .68 2.24 5.45 5.45 0 0 0 2.24.68c1.45.25 3.1.54 3.84 1.83s.17 2.82-.33 4.19a5.36 5.36 0 0 0-.53 2.32c.12.45.92 1.13 1.56 1.67 1.14.95 2.43 2.04 2.43 3.55s-1.29 2.6-2.43 3.55c-.64.54-1.44 1.21-1.56 1.66a5.38 5.38 0 0 0 .53 2.33c.5 1.37 1.06 2.93.33 4.2-.75 1.27-2.39 1.56-3.84 1.82a5.45 5.45 0 0 0-2.24.68 5.45 5.45 0 0 0-.68 2.24c-.26 1.45-.54 3.1-1.83 3.84-1.26.73-2.82.16-4.19-.33a5.35 5.35 0 0 0-2.32-.53c-.46.12-1.13.92-1.67 1.56-.95 1.15-2.04 2.44-3.55 2.44zm-5.46-6.2a3.1 3.1 0 0 1 .8.1 6.13 6.13 0 0 1 2.78 2.26c.61.74 1.38 1.65 1.88 1.65s1.27-.91 1.88-1.65a6.12 6.12 0 0 1 2.77-2.27 6.3 6.3 0 0 1 3.63.59c.83.3 1.98.7 2.36.49.4-.24.62-1.45.77-2.33a6.24 6.24 0 0 1 1.3-3.4 6.24 6.24 0 0 1 3.4-1.29c.88-.15 2.08-.37 2.32-.77.22-.39-.19-1.53-.49-2.36a6.3 6.3 0 0 1-.58-3.63 6.13 6.13 0 0 1 2.26-2.77c.74-.61 1.65-1.38 1.65-1.88s-.91-1.27-1.65-1.88a6.12 6.12 0 0 1-2.27-2.77 6.31 6.31 0 0 1 .6-3.63c.3-.84.7-1.97.48-2.36s-1.44-.62-2.33-.78a6.22 6.22 0 0 1-3.4-1.28 6.22 6.22 0 0 1-1.28-3.4c-.16-.89-.37-2.1-.78-2.33-.38-.22-1.53.19-2.36.49a6.32 6.32 0 0 1-3.63.58 6.13 6.13 0 0 1-2.77-2.26c-.61-.74-1.38-1.66-1.88-1.66s-1.27.92-1.88 1.66a6.12 6.12 0 0 1-2.77 2.27 6.28 6.28 0 0 1-3.63-.59c-.83-.3-1.98-.7-2.36-.49-.4.24-.62 1.45-.77 2.33a6.24 6.24 0 0 1-1.3 3.4 6.24 6.24 0 0 1-3.4 1.29c-.88.15-2.08.37-2.32.77-.22.39.19 1.53.49 2.36a6.3 6.3 0 0 1 .58 3.63 6.13 6.13 0 0 1-2.26 2.77c-.74.61-1.66 1.38-1.66 1.88s.92 1.27 1.66 1.88a6.12 6.12 0 0 1 2.27 2.77 6.31 6.31 0 0 1-.6 3.63c-.3.84-.7 1.97-.48 2.36.23.4 1.44.62 2.33.78a6.22 6.22 0 0 1 3.4 1.28 6.22 6.22 0 0 1 1.28 3.4c.16.89.37 2.1.78 2.33.38.22 1.53-.19 2.36-.49a8.7 8.7 0 0 1 2.82-.69z" data-original="#000000" />
+                                                    <path d="M24 39.26A15.26 15.26 0 1 1 39.26 24 15.28 15.28 0 0 1 24 39.26zm0-28.34A13.08 13.08 0 1 0 37.08 24 13.1 13.1 0 0 0 24 10.92z" />
+                                                    <path d="M19.38 29.71a1.09 1.09 0 0 1-.77-1.86l9.24-9.25a1.09 1.09 0 1 1 1.54 1.55l-9.24 9.25a1.09 1.09 0 0 1-.77.31zm-.28-6.8a3.81 3.81 0 1 1 3.81-3.82 3.81 3.81 0 0 1-3.81 3.82zm0-5.45a1.63 1.63 0 1 0 1.63 1.63 1.63 1.63 0 0 0-1.63-1.63zm9.8 15.26a3.81 3.81 0 1 1 3.82-3.82 3.81 3.81 0 0 1-3.81 3.82zm0-5.45a1.63 1.63 0 1 0 1.64 1.63 1.63 1.63 0 0 0-1.63-1.63z" />
+                                                </svg>
+                                            </div>
+                                            <div class="mb-2">
+                                                <h5 class="mb-2">Best price guarantee</h5>
+                                                <p>We are committed to the best prices and many promotions to bring you unforgettable France adventures.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex">
+                                            <div class="img-svg-gray me-5 mt-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 48 48">
+                                                    <path d="M44.63 20.93A20.49 20.49 0 0 0 38.6 7.07 20.5 20.5 0 0 0 24 1.02a20.67 20.67 0 0 0-20.63 19.9 4.85 4.85 0 0 0-2.89 4.44v5.45a4.85 4.85 0 0 0 4.85 4.85c1.74 0 3.14-1.4 3.15-3.14v-8.87c-.01-1.61-1.24-2.95-2.84-3.1.6-9.7 8.64-17.27 18.36-17.28 4.91 0 9.53 1.92 13.01 5.4a18.25 18.25 0 0 1 5.35 11.87 3.13 3.13 0 0 0-2.83 3.1v8.88a3.13 3.13 0 0 0 2.87 3.11v2.24a4.58 4.58 0 0 1-4.58 4.58h-3.4a3.37 3.37 0 0 0-3.2-2.28h-3.5a3.4 3.4 0 0 0 0 6.8l3.5.01c1.44 0 2.73-.92 3.2-2.28h3.4a6.84 6.84 0 0 0 6.82-6.83v-2.64a4.84 4.84 0 0 0 2.87-4.43v-5.44c0-1.97-1.19-3.68-2.88-4.43Zm-38.4 2.72v8.87a.9.9 0 0 1-.9.89 2.6 2.6 0 0 1-2.6-2.6v-5.46a2.6 2.6 0 0 1 2.6-2.6c.49 0 .9.4.9.9Zm26.13 20.17c-.12.53-.59.9-1.13.91h-3.5a1.14 1.14 0 0 1-1.16-1.16c0-.63.53-1.15 1.16-1.15h3.5c.3 0 .6.12.8.35.29.27.4.66.33 1.05ZM45.27 30.8a2.6 2.6 0 0 1-2.6 2.6.9.9 0 0 1-.9-.88v-8.87c0-.49.4-.9.9-.9a2.6 2.6 0 0 1 2.6 2.6Zm0 0" />
+                                                    <path d="M31.28 31.2a4.77 4.77 0 0 0 4.77-4.77v-9.72a4.71 4.71 0 0 0-4.77-4.77H16.73a4.77 4.77 0 0 0-4.78 4.77v9.72a4.77 4.77 0 0 0 4.78 4.76h.09v2.52a2.33 2.33 0 0 0 3.97 1.65l4.2-4.17Zm-7.57-1.93-4.53 4.5c-.02.03-.03.05-.07.03-.05-.03-.05-.06-.05-.09v-3.64c0-.62-.5-1.13-1.13-1.13h-1.21a2.52 2.52 0 0 1-2.52-2.51v-9.72c0-1.39 1.13-2.51 2.52-2.51h14.55a2.5 2.5 0 0 1 2.52 2.52v9.71c0 1.39-1.13 2.51-2.52 2.51H24.5c-.3 0-.58.12-.8.33Zm0 0" />
+                                                    <path d="M18.53 20.1a1.66 1.66 0 1 0 0 3.32 1.67 1.67 0 0 0 0-3.33Zm5.47 0a1.66 1.66 0 1 0-.23 3.31A1.66 1.66 0 0 0 24 20.1Zm5.46 0a1.66 1.66 0 0 0-1.53 2.52 1.67 1.67 0 1 0 1.54-2.53Zm0 0" />
+                                                </svg>
+                                            </div>
+                                            <div class="mb-2">
+                                                <h5 class="mb-2">Free support 24/7</h5>
+                                                <p>We stand by you on every trip and are ready to assist you promptly whenever you need us. We are online 24/7.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- /Why list -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Why choose -->
+        <!-- Team -->
+        <!-- Team -->
+        <section id="team" class="pt-14">
+            <div class="container">
+                <!-- Heading -->
+                <div class="d-block d-lg-flex align-items-center" data-cues="fadeIn">
+                    <div class="mb-6 me-lg-auto">
+                        <h2 class="h1 fw-bold mb-3 text-body-emphasis">Meet our team</h2>
+                        <p class="fs-5 text-body-secondary"> Meet our professional tour guide and operator. </p>
+                    </div>
+                    <div class="d-inline-flex align-items-center mb-6 fs-4 text-center justify-content-between">
+                        <a href="javascript(void);" class="team-prev cursor-pointer link-hover-primary p-4 lh-1">
+                            <i class="ti ti-arrow-narrow-left"></i>
+                        </a>
+                        <span class="team-pagination p-4 lh-1"></span>
+                        <a href="javascript(void);" class="team-next cursor-pointer link-hover-primary p-4 lh-1">
+                            <i class="ti ti-arrow-narrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- /Heading -->
+                <!-- Team slider -->
+                <div class="swiper swiper-pagination-number swiper-button-bottom team-slider" data-cue="fadeIn">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <!-- team item -->
+                            <div class="mb-12 text-center">
+                                <figure class="mb-5">
+                                    <img src="./assets/img/team/t5.jpg" srcset="./assets/img/team/t5@2x.jpg 2x" class="w-50 rounded-circle" alt="">
+                                </figure>
+                                <div>
+                                    <h3 class="h5 mb-1">John Doe</h3>
+                                    <span class="text-secondary small d-block mb-2">CEO</span>
+                                    <p>Lorem ipsum dolor sit amet, ad tota repudiare cum.</p>
+                                    <ul class="list-inline opacity-50">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                                                    <path d="M10 9l5 3l-5 3z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M8 20l4 -9"></path>
+                                                    <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
+                                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /team item -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- team item -->
+                            <div class="mb-12 text-center">
+                                <figure class="mb-5">
+                                    <img src="./assets/img/team/t1.jpg" srcset="./assets/img/team/t1@2x.jpg 2x" class="w-50 rounded-circle" alt="">
+                                </figure>
+                                <div>
+                                    <h3 class="h5 mb-1">Emily Smith</h3>
+                                    <span class="text-secondary small d-block mb-2">Co-Founder</span>
+                                    <p>Lorem ipsum dolor sit amet, ad tota repudiare cum.</p>
+                                    <ul class="list-inline opacity-50">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                                                    <path d="M10 9l5 3l-5 3z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M8 20l4 -9"></path>
+                                                    <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
+                                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /team item -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- team item -->
+                            <div class="mb-12 text-center">
+                                <figure class="mb-5">
+                                    <img src="./assets/img/team/t2.jpg" srcset="./assets/img/team/t2@2x.jpg 2x" class="w-50 rounded-circle" alt="">
+                                </figure>
+                                <div>
+                                    <h3 class="h5 mb-1">Alex Mark</h3>
+                                    <span class="text-secondary small d-block mb-2">Co-Founder</span>
+                                    <p>Lorem ipsum dolor sit amet, ad tota repudiare cum.</p>
+                                    <ul class="list-inline opacity-50">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                                                    <path d="M10 9l5 3l-5 3z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M8 20l4 -9"></path>
+                                                    <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
+                                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /team item -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- team item -->
+                            <div class="mb-12 text-center">
+                                <figure class="mb-5">
+                                    <img src="./assets/img/team/t3.jpg" srcset="./assets/img/team/t3@2x.jpg 2x" class="w-50 rounded-circle" alt="">
+                                </figure>
+                                <div>
+                                    <h3 class="h5 mb-1">Ariol Deep</h3>
+                                    <span class="text-secondary small d-block mb-2">Sales Manager</span>
+                                    <p>Lorem ipsum dolor sit amet, ad tota repudiare cum.</p>
+                                    <ul class="list-inline opacity-50">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                                                    <path d="M10 9l5 3l-5 3z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M8 20l4 -9"></path>
+                                                    <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
+                                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /team item -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- team item -->
+                            <div class="mb-12 text-center">
+                                <figure class="mb-5">
+                                    <img src="./assets/img/team/t4.jpg" srcset="./assets/img/team/t4@2x.jpg 2x" class="w-50 rounded-circle" alt="">
+                                </figure>
+                                <div>
+                                    <h3 class="h5 mb-1">Emma Ross</h3>
+                                    <span class="text-secondary small d-block mb-2"> Marketing Manager</span>
+                                    <p>Lorem ipsum dolor sit amet, ad tota repudiare cum.</p>
+                                    <ul class="list-inline opacity-50">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                                                    <path d="M10 9l5 3l-5 3z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M8 20l4 -9"></path>
+                                                    <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
+                                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /team item -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- team item -->
+                            <div class="mb-12 text-center">
+                                <figure class="mb-5">
+                                    <img src="./assets/img/team/t6.jpg" srcset="./assets/img/team/t6@2x.jpg 2x" class="w-50 rounded-circle" alt="">
+                                </figure>
+                                <div>
+                                    <h3 class="h5 mb-1">Tom Cruise</h3>
+                                    <span class="text-secondary small d-block mb-2">Accounting Manager</span>
+                                    <p>Lorem ipsum dolor sit amet, ad tota repudiare cum.</p>
+                                    <ul class="list-inline opacity-50">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                                                    <path d="M10 9l5 3l-5 3z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M8 20l4 -9"></path>
+                                                    <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
+                                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /team item -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Team slider -->
+            </div>
+        </section>
+        <!-- /Team -->
+        <!-- /Team -->
+        <!-- Client reviews -->
+        <section id="clientReviews" class="pt-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-24 col-xl-8">
+                        <!-- Heading -->
+                        <div class="pt-8 pt-xl-16" data-cues="fadeIn">
+                            <h2 class="h1 fw-bold mb-3 text-body-emphasis">Client reviews</h2>
+                            <p class="fs-5 text-body-secondary">We give our customers exciting experiences after every trip and preserve great moments.</p>
+                            <div class="d-inline-flex align-items-center mb-0 mb-xl-6 fs-4 text-center justify-content-between">
+                                <a href="javascript(void);" class="client-review-prev cursor-pointer link-hover-primary p-4 lh-1">
+                                    <i class="ti ti-arrow-narrow-left"></i>
+                                </a>
+                                <span class="client-review-pagination p-4 lh-1"></span>
+                                <a href="javascript(void);" class="client-review-next cursor-pointer link-hover-primary p-4 lh-1">
+                                    <i class="ti ti-arrow-narrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /Heading -->
+                    </div>
+                    <div class="col-24 col-xl-16">
+                        <div class="bg-brand pt-8 pt-md-12 pt-lg-16 pb-6 pb-lg-8" data-cue="fadeIn">
+                            <div class="bg-brand-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1379 1200">
+                                    <path d="M1076.17 232c143.42 89.1 272.63 203.17 293.73 328.7 22.62 125.64-63.02 264.4-176.51 355.02-111.98 90.62-251.67 132.97-388.05 168-136.25 35.04-270.84 62.76-414.12 48.28-143.27-14.76-298.83-71.86-356.47-168.14-57.64-97.93-17.51-235.17 33.1-353.38a982.49 982.49 0 0 1 204.5-312.69c94.46-96.55 222.02-191.45 363.5-206.07 141.5-16 297.04 49.66 440.32 140.28Zm0 0" />
+                                </svg>
+                            </div>
+                            <!-- Review list -->
+                            <div class="swiper client-review-slider mb-10">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <!-- Review item -->
+                                        <div class="card border-0 shadow m-5">
+                                            <div class="card-body d-md-flex review-content">
+                                                <figure>
+                                                    <img src="./assets/img/avatars/a1.jpg" srcset="./assets/img/avatars/a1@2x.jpg 2x" alt="" class="rounded-circle">
+                                                </figure>
+                                                <div class="ps-3">
+                                                    <blockquote>
+                                                        <em>"The boat ride provided great views of the two islands. The audio tours were excellent, and I highly recommend this experience."</em>
+                                                    </blockquote>
+                                                    <span class="d-block mb-2">
+                                                        <span class="star-rate-view star-rate-size-sm me-1"><span class="star-value rate-45"></span></span>
+                                                    </span>
+                                                    <span class="blockquote-footer mt-0 mb-0"> Abraham Deep (Paris, France) </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Review item -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- Review item -->
+                                        <div class="card border-0 shadow m-5">
+                                            <div class="card-body d-md-flex review-content">
+                                                <figure>
+                                                    <img src="./assets/img/avatars/a2.jpg" srcset="./assets/img/avatars/a2@2x.jpg 2x" alt="" class="rounded-circle">
+                                                </figure>
+                                                <div class="ps-3">
+                                                    <blockquote>
+                                                        <em>"We also enjoyed arriving at the tour office a little early and enjoying a delicious almond croissant at the cafe across the street."</em>
+                                                    </blockquote>
+                                                    <span class="d-block mb-2">
+                                                        <span class="star-rate-view star-rate-size-sm me-1"><span class="star-value rate-45"></span></span>
+                                                    </span>
+                                                    <span class="blockquote-footer mt-0 mb-0"> Jenifer Lee (New York, USA) </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Review item -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- Review item -->
+                                        <div class="card border-0 shadow m-5">
+                                            <div class="card-body d-md-flex review-content">
+                                                <figure>
+                                                    <img src="./assets/img/avatars/a3.jpg" srcset="./assets/img/avatars/a3@2x.jpg 2x" alt="" class="rounded-circle">
+                                                </figure>
+                                                <div class="ps-3">
+                                                    <blockquote>
+                                                        <em>"The boat ride provided great views of the two islands. The audio tours were excellent, and I highly recommend this experience."</em>
+                                                    </blockquote>
+                                                    <span class="d-block mb-2">
+                                                        <span class="star-rate-view star-rate-size-sm me-1"><span class="star-value rate-45"></span></span>
+                                                    </span>
+                                                    <span class="blockquote-footer mt-0 mb-0"> Michael Owen (London, England) </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Review item -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- Review item -->
+                                        <div class="card border-0 shadow m-5">
+                                            <div class="card-body d-md-flex review-content">
+                                                <figure>
+                                                    <img src="./assets/img/avatars/a4.jpg" srcset="./assets/img/avatars/a4@2x.jpg 2x" alt="" class="rounded-circle">
+                                                </figure>
+                                                <div class="ps-3">
+                                                    <blockquote>
+                                                        <em>"You meet outside a souvenir shop where you are given your tickets. Where you are given a lovely history lesson about Paris.."</em>
+                                                    </blockquote>
+                                                    <span class="d-block mb-2">
+                                                        <span class="star-rate-view star-rate-size-sm me-1"><span class="star-value rate-45"></span></span>
+                                                    </span>
+                                                    <span class="blockquote-footer mt-0 mb-0"> Steve Mark (New York, USA) </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Review item -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Type list -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Client reviews -->
+    </main>
+    <!-- Footer -->
+    <footer id="footer" class="pt-14 pb-12 mt-14  border-top border-secondary-subtle bg-dark" data-bs-theme="dark">
+        <div class="container">
+            <!-- Brands system -->
+            <div class="border-bottom mb-9 pb-5 text-body-tertiary">
+                <div class="row" data-cues="fadeIn">
+                    <div class="col-12 col-lg-4 col-md-8">
+                        <figure>
+                            <img class="img-fluid" src="./assets/img/logos/l1.png" srcset="./assets/img/logos/l1@2x.png 2x" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-8">
+                        <figure>
+                            <img class="img-fluid" src="./assets/img/logos/l2.png" srcset="./assets/img/logos/l2@2x.png 2x" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-8">
+                        <figure>
+                            <img class="img-fluid" src="./assets/img/logos/l3.png" srcset="./assets/img/logos/l3@2x.png 2x" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-8">
+                        <figure>
+                            <img class="img-fluid" src="./assets/img/logos/l4.png" srcset="./assets/img/logos/l4@2x.png 2x" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-8">
+                        <figure>
+                            <img class="img-fluid" src="./assets/img/logos/l5.png" srcset="./assets/img/logos/l5@2x.png 2x" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-8">
+                        <figure>
+                            <img class="img-fluid" src="./assets/img/logos/l6.png" srcset="./assets/img/logos/l6@2x.png 2x" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!-- /Brands system -->
+            <!-- Footer top -->
+            <div class="border-bottom text-body-tertiary">
+                <div class="row" data-cues="fadeIn">
+                    <div class="col-24 col-xl-6 col-lg-24 col-md-12">
+                        <!-- Brand -->
+                        <div class="mb-8">
+                            <a href="./index.html" class="d-inline-flex align-items-center fs-3 fw-semibold text-white mb-6">
+                                <figure class="mb-0 me-3">
+                                    <img class="img-fluid" src="./assets/img/logos/footer-light.png" srcset="./assets/img/logos/footer-light@2x.png 2x" alt="">
+                                </figure>
+                                <span>Evargo</span>
+                            </a>
+                            <p>
+                                <em>Sed diam constituam ei, qui erat probo dissentiet ex. Id vim libris volutpat, pri cu errem timeam cotidieque, purto summo has te. An quis eligendi atomorum duo, latine veritus vituperata vim.</em>
+                                <a href="./about.html" class="text-body link-hover-primary">[+]</a>
+                            </p>
+                        </div>
+                        <!-- /Brand -->
+                    </div>
+                    <div class="col-24 col-xl-6 col-lg-8 col-md-12">
+                        <!-- Contact Info -->
+                        <div class="mb-8">
+                            <h5 class="text-body-emphasis">Contact Info</h5>
+                            <div class="pt-2">
+                                <p>
+                                    <span>610 Placer Loquen, Paris, France.</span>
+                                </p>
+                                <p>
+                                    <span>+33 321-654-9876 (Ext: 123).</span>
+                                </p>
+                                <p>
+                                    <a href="#" class="text-body link-hover-primary">Booking@example.com</a>
+                                </p>
+                                <p>
+                                    <a href="#" class="text-body link-hover-primary">www.example.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /Contact Info -->
+                    </div>
+                    <div class="col-24 col-xl-6 col-lg-8 col-md-12">
+                        <!-- Quick Links -->
+                        <div class="mb-8">
+                            <h5 class="text-body-emphasis">Quick Links</h5>
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./about.html">About us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./post-grid.html">Blog</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./contact.html">Contact Us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./dashboard.html">My Account</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./tour-list.html">Special offers</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./explore.html">Explore France</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./destinations.html">Destinations</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="./tour-list.html">France tours</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Quick Links -->
+                    </div>
+                    <div class="col-24 col-xl-6 col-lg-8 col-md-12">
+                        <div class="mb-8">
+                            <!-- Mobile App -->
+                            <div class="mb-6">
+                                <h5 class="text-body-emphasis">Get the app</h5>
+                                <div class="pt-4">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a href="#">
+                                                <figure>
+                                                    <img src="./assets/img/icons/i1.svg" class="img-fluid" alt="">
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#">
+                                                <figure>
+                                                    <img src="./assets/img/icons/i2.svg" class="img-fluid" alt="">
+                                                </figure>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /Mobile App -->
+                            <!-- Social -->
+                            <div class="mb-6">
+                                <h5 class="text-body-emphasis">Connect social</h5>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-body link-hover-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-body link-hover-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-body link-hover-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                                                <path d="M10 9l5 3l-5 3z"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-body link-hover-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M8 20l4 -9"></path>
+                                                <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
+                                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-body link-hover-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tripadvisor" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M6.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
+                                                <path d="M17.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
+                                                <path d="M17.5 9a4.5 4.5 0 1 0 3.5 1.671l1 -1.671h-4.5z"></path>
+                                                <path d="M6.5 9a4.5 4.5 0 1 1 -3.5 1.671l-1 -1.671h4.5z"></path>
+                                                <path d="M10.5 15.5l1.5 2l1.5 -2"></path>
+                                                <path d="M9 6.75c2 -.667 4 -.667 6 0"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /Social -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Footer top -->
+            <!-- Footer Bottom -->
+            <div class="mt-9 text-body-tertiary" data-bs-theme="dark">
+                <div class="row">
+                    <div class="col-24 col-md-12">
+                        <p>© 2023 Evargo. All rights reserved.</p>
+                    </div>
+                    <div class="col-24 col-md-12">
+                        <div class="text-start text-md-end">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a class="text-body link-hover-primary" href="./blank.html">Privacy Policy</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-body link-hover-primary" href="./blank.html">Terms of Use</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Footer Bottom -->
+        </div>
+    </footer>
+    <!-- Scroll top -->
+    <a href="#" class="scroll-top active"><i class="ti ti-chevron-up"></i></a>
+    <!-- /Scroll top -->
+    <!-- /Footer -->
+    <!-- Scripts -->
+
+    <script src="./assets/js/js.js"></script>
+    <!-- /Scripts -->
+</body>
+
+</html>
